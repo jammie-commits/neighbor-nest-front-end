@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+
+.main-container {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container,
+.main-container * {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input,
+select,
+textarea,
+button {
+  outline: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  position: relative;
+  width: 1440px;
+  height: 127px;
+  margin: 0 auto;
+}
+.white-black-modern {
+  position: absolute;
+  width: 162px;
+  height: 127px;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/logo.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
+}
+.frame-1 {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 40px;
+  position: absolute;
+  width: 686.621px;
+  height: 43px;
+  top: 42px;
+  left: 691px;
+  z-index: 1;
 }
-
-.App-link {
-  color: #61dafb;
+.home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 48.414px;
+  height: 17px;
+  color: #000000;
+  font-family: Rubik, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.59px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 2;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-us {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 74.483px;
+  height: 17px;
+  color: #000000;
+  font-family: Rubik, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.59px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 3;
+}
+.features {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 72px;
+  height: 17px;
+  color: #000000;
+  font-family: Rubik, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.59px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
+}
+.contact-us {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  width: 76px;
+  height: 17px;
+  color: #000000;
+  font-family: Rubik, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.59px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 5;
+}
+.frame-2 {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 10px;
+  position: relative;
+  width: 255.724px;
+  padding: 13px 24px 13px 24px;
+  cursor: pointer;
+  background: #cfebf9;
+  border: none;
+  z-index: 6;
+  border-radius: 12px;
+}
+.login-create-account {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 17px;
+  color: #000000;
+  font-family: Rubik, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.59px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 7;
 }

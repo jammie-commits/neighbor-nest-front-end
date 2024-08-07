@@ -1,26 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import EventList from './components/EventList';
-import NewsList from './components/NewsList';
-import UserDashboard from './components/UserDashboard';
-import AdminDashboard from './components/AdminDashboard';
-import NotFound from './components/NotFound';
+import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
+import Home from './Pages/LandingPage';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
+import './App.css';
+
+
 
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
-        <Switch>
+        <Routes>
           <Route exact path="/" component={Home} />
-          <Route path="/events" component={EventList} />
-          <Route path="/news" component={NewsList} />
-          <Route path="/dashboard" component={UserDashboard} />
-          <Route path="/admin" component={AdminDashboard} />
-          <Route component={NotFound} />
-        </Switch>
+          <Route path="/header" component={Header} />
+          <Route path="/herosection" component={HeroSection} />
+          <Route path="/services" component={Services} />
+          <Route path="/testimonials" component={Testimonials} />
+          <Route path="/footer" component={Footer} />
+        </Routes>
       </div>
     </Router>
   );
