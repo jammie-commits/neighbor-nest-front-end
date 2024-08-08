@@ -10,6 +10,36 @@
   color: white;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes space between items */
+}
+
+.dashboard-content {
+  flex: 1; /* Takes up available space */
+}
+
+.dashboard-shortcuts {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-shortcuts li {
+  margin: 10px 0;
+}
+
+.dashboard-shortcuts a {
+  color: white;
+  text-decoration: none;
+}
+
+.settings-logout {
+  margin-top: auto; /* Pushes these items to the bottom of the available space */
+}
+
+.settings-logout li {
+  margin: 10px 0;
 }
 
 .main-content {
@@ -20,9 +50,9 @@
 
 .user-profile-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Aligns profile to the end (right) */
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px; /* Adjusted padding for positioning */
   background-color: white; /* Ensures it's in the white part of the page */
   border-bottom: 1px solid #ccc; /* Optional: adds a subtle border to separate it from the news content */
 }
@@ -31,6 +61,7 @@
   font-size: 1.2em;
   font-weight: bold;
   color: #333; /* Dark gray for contrast */
+  margin-left: 10px; /* Adds space between the profile picture and the username */
 }
 
 .news-container {
@@ -43,4 +74,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding is included in width */
 }
