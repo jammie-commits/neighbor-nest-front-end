@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../LandingPage.css';
 
 export default function Services() {
   return (
@@ -7,13 +7,13 @@ export default function Services() {
       <span className='services'>Services</span>
       <div className='services-grid'>
         <div className='service'>
-          <div className='icon-container'>
+          <div className='service-icon-container'>
             <div className='bg' />
-            <div className='icon'>
-              <div className='vector' />
+            <div className='service-icon'>
+              <div className='service-vector' />
             </div>
           </div>
-          <div className='text-container'>
+          <div className='service-text-container'>
             <span className='service-title'>News Updates</span>
             <span className='service-description'>
               Unlock your potential with our expertly designed exercises that
@@ -22,13 +22,13 @@ export default function Services() {
           </div>
         </div>
         <div className='service-1'>
-          <div className='icon-container-2'>
+          <div className='service-icon-container-2'>
             <div className='bg-3' />
-            <div className='icon-4'>
-              <div className='vector-5' />
+            <div className='service-icon-4'>
+              <div className='service-vector-5' />
             </div>
           </div>
-          <div className='text-container-6'>
+          <div className='service-text-container-6'>
             <span className='service-title-7'>Organize/Join Events</span>
             <span className='service-description-8'>
               Our app tailors workouts to your fitness level and goals, ensuring
@@ -37,13 +37,13 @@ export default function Services() {
           </div>
         </div>
         <div className='service-9'>
-          <div className='icon-container-a'>
+          <div className='service-icon-container-a'>
             <div className='bg-b' />
-            <div className='icon-c'>
-              <div className='vector-d' />
+            <div className='service-icon-c'>
+              <div className='service-vector-d' />
             </div>
           </div>
-          <div className='text-container-e'>
+          <div className='service-text-container-e'>
             <span className='service-title-f'>Connect with Neighbors</span>
             <span className='service-description-10'>
               Monitor your performance with detailed analytics, helping you stay

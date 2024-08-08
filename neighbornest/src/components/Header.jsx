@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import '../LandingPage.css';
 
 export default function Header() {
   return (

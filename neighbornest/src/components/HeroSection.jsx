@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../LandingPage.css'
 
 function HeroSection() {
   return (
@@ -15,8 +16,8 @@ function HeroSection() {
           </button>
         </div>
         <div>
-          <div className="rectangle rectangle-1" />
-          <div className="rectangle rectangle-2" />
+          <div className="rectangle rectangle-hs-1" />
+          <div className="rectangle rectangle-hs-2" />
         </div>
       </div>
     </section>

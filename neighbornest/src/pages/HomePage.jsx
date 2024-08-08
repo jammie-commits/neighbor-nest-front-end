@@ -4,7 +4,7 @@ import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
-import '../App.css';
+import '../LandingPage.css';
 
 const HomePage = () => {
   return (
