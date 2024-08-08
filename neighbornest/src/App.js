@@ -1,28 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
-import Home from './Pages/LandingPage';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
-import './App.css';
-
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs'; 
+import Login from './pages/Login'; 
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route exact path="/" component={Home} />
-          <Route path="/header" component={Header} />
-          <Route path="/herosection" component={HeroSection} />
-          <Route path="/services" component={Services} />
-          <Route path="/testimonials" component={Testimonials} />
-          <Route path="/footer" component={Footer} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </Router>
   );
 }

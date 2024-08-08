@@ -6,16 +6,22 @@ import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 import '../App.css';
 
-const LandingPage = () => {
+const HomePage = () => {
   return (
-    <div>
+    <div className="home-page">
       <Header />
-      <HeroSection />
-      <Services />
-      <Testimonials />
+      <main>
+        <HeroSection />
+        <section className="services-section">
+          <Services />
+        </section>
+        <section className="testimonials-section">
+          <Testimonials />
+        </section>
+      </main>
       <Footer />
     </div>
   );
 };
 
-export default LandingPage;
+export default HomePage;

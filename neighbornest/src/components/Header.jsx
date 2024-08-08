@@ -1,20 +1,24 @@
 import React from 'react';
-import '../App.css';
 import { Link } from 'react-router-dom';
+import '../App.css';
 
-export default function Main() {
+const Header = () => {
   return (
-    <div className='main-container'>
-      <div className='white-black-modern' />
-      <div className='frame-1'>
+    <header className='header'>
+      <div className='logo'>
+        <Link to="/">FitFusion</Link>
+      </div>
+      <nav className='navbar'>
         <Link to="/">Home</Link>
         <Link to="/about-us">About Us</Link>
-        <Link to="/features">Features</Link>
+        <Link to="/services">Services</Link>
         <Link to="/contact-us">Contact Us</Link>
-        <button className='frame-2'>
-          <Link to="/login-or-create-account">Login or Create Account</Link>
+        <button className='login-button'>
+          <Link to="/login">Login</Link>
         </button>
-      </div>
-    </div>
+      </nav>
+    </header>
   );
-}
+};
+
+export default Header;
