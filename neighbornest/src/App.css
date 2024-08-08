@@ -623,3 +623,450 @@ button {
   z-index: 24;
   overflow: hidden;
 }
+
+/* Testimonials.css */
+
+
+.testimonials-container {
+  overflow: hidden;
+}
+
+.testimonials-container,
+.testimonials-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.testimonials-container {
+  position: relative;
+  width: 1298px;
+  height: 496px;
+  margin: 0 auto;
+  font-size: 0px;
+}
+.clients-say {
+  display: block;
+  position: relative;
+  height: 81px;
+  margin: 0 0 0 4px;
+  color: #000000;
+  font-family: Merriweather, var(--default-font-family);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 81px;
+  text-align: left;
+  white-space: nowrap;
+}
+.flex-row-b {
+  position: relative;
+  width: 1298px;
+  height: 363px;
+  margin: 52px 0 0 0;
+  z-index: 24;
+}
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: -45px;
+  position: absolute;
+  width: 451px;
+  height: 326px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50.33%, -55.67%);
+  z-index: 24;
+}
+.frame-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  width: 451px;
+  padding: 50px 24px 90px 24px;
+  background: #eb9350;
+  z-index: 25;
+  border-radius: 8px;
+}
+.icon-pack {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 26;
+  overflow: hidden;
+}
+.vector {
+  position: absolute;
+  width: 42.86%;
+  height: 85.71%;
+  top: 7.14%;
+  left: 0;
+  background: url(./assets/quote.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 27;
+}
+.vector-2 {
+  position: absolute;
+  width: 42.86%;
+  height: 85.71%;
+  top: 7.14%;
+  left: 57.14%;
+  background: url(./assets/quote.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 28;
+}
+.frame-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  min-width: 0;
+  z-index: 29;
+}
+.long-established-fact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 403px;
+  height: 66px;
+  color: #2d2e2e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  z-index: 30;
+}
+.frame-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+  position: relative;
+  width: 90px;
+  z-index: 31;
+}
+.avatar {
+  flex-shrink: 0;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  z-index: 32;
+}
+.ellipse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/avatar.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 33;
+  border-radius: 50%;
+}
+.lora-smith {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 19px;
+  color: #2d2e2e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 34;
+}
+.frame-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: -45px;
+  position: absolute;
+  width: 451px;
+  height: 326px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-143.9%, -44.33%);
+  opacity: 0.8;
+  z-index: 2;
+}
+.frame-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  width: 451px;
+  padding: 50px 40px 90px 40px;
+  background: #f6f6f6;
+  z-index: 3;
+  border-radius: 8px;
+}
+.icon-pack-7 {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 4;
+  overflow: hidden;
+}
+.vector-8 {
+  position: absolute;
+  width: 42.86%;
+  height: 85.71%;
+  top: 7.14%;
+  left: 0;
+  background: url(./assets/quote.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 5;
+}
+.vector-9 {
+  position: absolute;
+  width: 42.86%;
+  height: 85.71%;
+  top: 7.14%;
+  left: 57.14%;
+  background: url(./assets/quote.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 6;
+}
+.frame-a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  min-width: 0;
+  z-index: 7;
+}
+.reader-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 371px;
+  height: 66px;
+  color: #2d2e2e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  z-index: 8;
+}
+.frame-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+  position: relative;
+  width: 90px;
+  z-index: 9;
+}
+.avatar-c {
+  flex-shrink: 0;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  z-index: 10;
+}
+.ellipse-d {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/avatar.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 11;
+  border-radius: 50%;
+}
+.lora-smith-e {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 19px;
+  color: #2d2e2e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+.frame-f {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: -45px;
+  position: absolute;
+  width: 451px;
+  height: 326px;
+  top: 50%;
+  left: 50%;
+  transform: translate(43.9%, -44.33%);
+  opacity: 0.8;
+  z-index: 13;
+}
+.frame-10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  width: 451px;
+  padding: 50px 40px 90px 40px;
+  background: #f6f6f6;
+  z-index: 14;
+  border-radius: 8px;
+}
+.icon-pack-11 {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  z-index: 15;
+  overflow: hidden;
+}
+.vector-12 {
+  position: absolute;
+  width: 42.86%;
+  height: 85.71%;
+  top: 7.14%;
+  left: 0;
+  background: url(./assets/quote.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 16;
+}
+.vector-13 {
+  position: absolute;
+  width: 42.86%;
+  height: 85.71%;
+  top: 7.14%;
+  left: 57.14%;
+  background: url(./assets/quote.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 17;
+}
+.frame-14 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  min-width: 0;
+  z-index: 18;
+}
+.reader-layout-15 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 371px;
+  height: 66px;
+  color: #2d2e2e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  z-index: 19;
+}
+.frame-16 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+  position: relative;
+  width: 90px;
+  z-index: 20;
+}
+.avatar-17 {
+  flex-shrink: 0;
+  position: relative;
+  width: 90px;
+  height: 90px;
+  z-index: 21;
+}
+.ellipse-18 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(./assets/avatar.png)
+    no-repeat center;
+  background-size: 100% 100%;
+  z-index: 22;
+  border-radius: 50%;
+}
+.lora-smith-19 {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 19px;
+  color: #2d2e2e;
+  font-family: Inter, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 23;
+}
