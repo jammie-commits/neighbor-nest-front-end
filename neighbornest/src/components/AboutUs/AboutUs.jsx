@@ -5,7 +5,7 @@ function AboutUs() {
   return (
     <div className="about-us">
       <header className="header">
-        <img src="/path/to/logo.png" alt="Logo" className="logo" />
+        <img src="/images/White_And_Black_Modern_Abstract_Beauty_Logo-removebg-preview 1 (1).png" alt="Logo" className="logo" />
         <nav className="nav">
           <a href="/">Home</a>
           <a href="/about">About Us</a>
@@ -29,7 +29,6 @@ function AboutUs() {
         <p>Email: info@example.net</p>
         <p>Address: 900 Domenico Ave Cape City, NL 12317, Johannesburg, South Africa</p>
         <div className="socials">
-            
           <a href="https://instagram.com">Instagram</a>
           <a href="https://twitter.com">Twitter</a>
           <a href="https://facebook.com">Facebook</a>
