@@ -1,0 +1,18 @@
+/* src/components/UserProfile.css */
+.user-profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 16px;
+    color: #fff;
+  }
+  

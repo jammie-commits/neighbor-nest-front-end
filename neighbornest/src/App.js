@@ -2,6 +2,7 @@
 import './App.css';
 import Resident from './pages/Resident';
 import NewsCard from './components/NewsCard';
+import UserProfile from './components/UserProfile'; // Import UserProfile component
 import './components/NewsCard.css';
 
 const newsData = [
@@ -40,22 +41,27 @@ function App() {
           <li><a href="#">Logout</a></li>
         </ul>
       </div>
-      <div className="news-container">
-        <Resident />
-        <div className="search-bar">
-          <input type="text" placeholder="Search community notes..." />
+      <div className="main-content">
+        <div className="user-profile-container">
+          <UserProfile />
         </div>
-        <div className="news-card-container">
-          {newsData.map((news, index) => (
-            <NewsCard
-              key={index}
-              title={news.title}
-              description={news.description}
-              imageUrl={news.imageUrl}
-              author={news.author}
-              date={news.date}
-            />
-          ))}
+        <div className="news-container">
+          <Resident />
+          <div className="search-bar">
+            <input type="text" placeholder="Search community notes..." />
+          </div>
+          <div className="news-card-container">
+            {newsData.map((news, index) => (
+              <NewsCard
+                key={index}
+                title={news.title}
+                description={news.description}
+                imageUrl={news.imageUrl}
+                author={news.author}
+                date={news.date}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
