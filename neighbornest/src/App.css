@@ -5,6 +5,8 @@
     "Source Han Sans CN", sans-serif;
 }
 
+/* Header.css */
+
 .header-container {
   overflow: hidden;
 }
@@ -151,4 +153,111 @@ button {
   text-align: left;
   white-space: nowrap;
   z-index: 7;
+}
+
+/* Herosection.css */
+
+
+.hero-section {
+  overflow: hidden;
+}
+
+.hero-section,
+.hero-section * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.hero-section {
+  position: relative;
+  width: 1278px;
+  height: 539px;
+  margin: 0 auto;
+}
+.tagline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 784px;
+  height: 202px;
+  top: 0;
+  left: 0;
+  color: #5168ad;
+  font-family: Merriweather, var(--default-font-family);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 100.56px;
+  text-align: left;
+  z-index: 2;
+}
+.rectangle-2 {
+  position: absolute;
+  width: 401px;
+  height: 319px;
+  top: 21px;
+  left: 877px;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 8;
+}
+.rectangle-1 {
+  position: absolute;
+  width: 415px;
+  height: 337px;
+  top: 202px;
+  left: 690px;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 7;
+}
+.subheadline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 648px;
+  height: 120px;
+  top: 249px;
+  left: 0;
+  color: #000000;
+  font-family: Ponnala, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  opacity: 0.5;
+  z-index: 1;
+}
+.herosection-button {
+  position: absolute;
+  width: 240px;
+  height: 60px;
+  top: 479px;
+  left: 0;
+  background: #264065;
+  z-index: 5;
+  border-radius: 16px 16px 16px 0;
+  box-shadow: 0 24px 50px 0 rgba(0, 0, 0, 0.1);
+}
+.get-started {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 27px;
+  top: 16px;
+  left: 68px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 6;
 }
