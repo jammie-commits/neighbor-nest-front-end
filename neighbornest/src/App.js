@@ -34,14 +34,17 @@ function App() {
       <div className="dashboard">
         <h2>Dashboard</h2>
         <ul className="dashboard-shortcuts">
-          <li><a href="/activity">Activity</a></li>
-          <li><a href="/submissions">Submissions</a></li>
-          <li><a href="/settings">Settings</a></li>
-          <li><a href="/logout">Logout</a></li>
+          <li><a href="#">Activity</a></li>
+          <li><a href="#">Submissions</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Logout</a></li>
         </ul>
       </div>
       <div className="news-container">
         <Resident />
+        <div className="search-bar">
+          <input type="text" placeholder="Search community notes..." />
+        </div>
         <div className="news-card-container">
           {newsData.map((news, index) => (
             <NewsCard
