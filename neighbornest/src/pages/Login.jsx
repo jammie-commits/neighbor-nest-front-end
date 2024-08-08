@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Login.css';
+import { Link } from 'react-router-dom';
 
 export default function LoginPage() {
   return (
@@ -27,13 +28,13 @@ export default function LoginPage() {
           </div>
           <button className='frame-9'>
             <div className='button'>
-              <span className='contact-us'>Log in</span>
+              <span className='contact-us2'>Log in</span>
             </div>
           </button>
           <div className='group'>
             <div className='sign-up'>
               <span className='dont-have-account'>Don’t have an account? </span>
-              <a href='/signup' className='text-9'>Sign Up</a>
+              <Link to="/signup" className='text-9'>Sign Up</Link>
             </div>
           </div>
         </div>
