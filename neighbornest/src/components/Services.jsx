@@ -3,7 +3,7 @@ import '../LandingPage.css';
 
 export default function Services() {
   return (
-    <div className='services-container'>
+    <div id="services" className='services-container'>
       <span className='services'>Services</span>
       <div className='services-grid'>
         <div className='service'>
