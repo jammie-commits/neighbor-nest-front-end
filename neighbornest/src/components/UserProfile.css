@@ -4,15 +4,20 @@
     align-items: center;
     justify-content: flex-end;
     padding: 10px;
+    background-color: white; /* Ensure it's consistent with your layout */
+    border-bottom: 1px solid #ccc; /* Optional: adds a subtle border */
   }
   
   .profile-image {
-    border-radius: 50%;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image circular */
     margin-right: 10px;
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
   }
   
   .username {
     font-size: 16px;
-    color: #fff;
+    color: #333; /* Adjust color as needed */
   }
   

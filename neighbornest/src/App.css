@@ -6,7 +6,7 @@
 
 .dashboard {
   width: 300px;
-  background-color: #003366;
+  background-color: #003366; /* Dark blue */
   color: white;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -21,8 +21,16 @@
 .user-profile-container {
   display: flex;
   justify-content: flex-end;
-  background-color: #003366;
+  align-items: center;
   padding: 10px;
+  background-color: white; /* Ensures it's in the white part of the page */
+  border-bottom: 1px solid #ccc; /* Optional: adds a subtle border to separate it from the news content */
+}
+
+.user-profile-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333; /* Dark gray for contrast */
 }
 
 .news-container {

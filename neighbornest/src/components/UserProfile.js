@@ -6,11 +6,11 @@ const UserProfile = () => {
   return (
     <div className="user-profile">
       <img
-        src="https://via.placeholder.com/40" // Replace with the user's profile image URL
+        src="https://via.placeholder.com/40" //Profile image URL
         alt="User Profile"
         className="profile-image"
       />
-      <span className="username">John Doe</span> {/* Replace with actual username */}
+      <span className="username">John Rambo</span> {}
     </div>
   );
 }
