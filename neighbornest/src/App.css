@@ -1,32 +1,29 @@
-/* src/App.css */
 .App {
   display: flex;
-  height: 100vh; /* Full height for better layout */
+  height: 100vh;
 }
 
 .dashboard {
   width: 300px;
-  background-color: #003366; /* Dark blue */
+  background-color: #003366; 
   color: white;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distributes space between items */
+  flex-direction: column; 
 }
 
-.dashboard-content {
-  flex: 1; /* Takes up available space */
+.dashboard h2 {
+  margin: 0; 
 }
 
 .dashboard-shortcuts {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .dashboard-shortcuts li {
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .dashboard-shortcuts a {
@@ -34,12 +31,8 @@
   text-decoration: none;
 }
 
-.settings-logout {
-  margin-top: auto; /* Pushes these items to the bottom of the available space */
-}
-
-.settings-logout li {
-  margin: 10px 0;
+.dashboard-shortcuts a:hover {
+  text-decoration: underline;
 }
 
 .main-content {
@@ -50,18 +43,17 @@
 
 .user-profile-container {
   display: flex;
-  justify-content: flex-end; /* Aligns profile to the end (right) */
+  justify-content: flex-end;
   align-items: center;
-  padding: 10px 20px; /* Adjusted padding for positioning */
+  padding: 10px;
   background-color: white; /* Ensures it's in the white part of the page */
-  border-bottom: 1px solid #ccc; /* Optional: adds a subtle border to separate it from the news content */
+  border-bottom: 1px solid #ccc;
 }
 
 .user-profile-name {
   font-size: 1.2em;
   font-weight: bold;
-  color: #333; /* Dark gray for contrast */
-  margin-left: 10px; /* Adds space between the profile picture and the username */
+  color: #333;
 }
 
 .news-container {
@@ -74,13 +66,4 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
-
-.search-bar {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding is included in width */
 }

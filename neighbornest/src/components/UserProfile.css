@@ -1,23 +1,17 @@
-/* src/components/UserProfile.css */
 .user-profile {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 10px;
-    background-color: white; /* Ensure it's consistent with your layout */
-    border-bottom: 1px solid #ccc; /* Optional: adds a subtle border */
   }
   
   .profile-image {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    border-radius: 50%; /* Makes the image circular */
+    border-radius: 50%;
     margin-right: 10px;
-    object-fit: cover; /* Ensures the image covers the circle without distortion */
   }
   
   .username {
     font-size: 16px;
-    color: #333; /* Adjust color as needed */
+    color: #333;
   }
   

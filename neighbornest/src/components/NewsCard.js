@@ -1,4 +1,3 @@
-// src/components/NewsCard.js
 import React from 'react';
 import './NewsCard.css';
 

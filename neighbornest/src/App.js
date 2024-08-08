@@ -1,10 +1,9 @@
-// src/App.js
+import React from 'react';
 import './App.css';
 import Resident from './pages/Resident';
 import NewsCard from './components/NewsCard';
-import UserProfile from './components/UserProfile';
-import SearchBar from './components/SearchBar'; // Import SearchBar
-import { useState } from 'react'; // Import useState for search functionality
+import './components/NewsCard.css';
+import SearchBar from './components/SearchBar';
 
 const newsData = [
   {
@@ -31,37 +30,28 @@ const newsData = [
 ];
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = React.useState('');
 
   return (
     <div className="App">
       <div className="dashboard">
-        <div className="dashboard-content">
-          <h2>Dashboard</h2>
-          <ul className="dashboard-shortcuts">
-            <li><a href="/activity">Activity</a></li>
-            <li><a href="/submissions">Submissions</a></li>
-          </ul>
-        </div>
-        <div className="settings-logout">
-          <ul className="dashboard-shortcuts">
-            <li><a href="/settings">Settings</a></li>
-            <li><a href="/logout">Logout</a></li>
-          </ul>
-        </div>
+        <h2>Dashboard</h2>
+        <ul className="dashboard-shortcuts">
+          <li><a href="/activity">Activity</a></li>
+          <li><a href="/submissions">Submissions</a></li>
+          <li><a href="/settings">Settings</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
       </div>
       <div className="main-content">
         <div className="user-profile-container">
-          <UserProfile />
+          <span className="user-profile-name">John Rambo</span>
         </div>
-        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> {/* Added SearchBar */}
+        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <div className="news-container">
           <Resident />
           <div className="news-card-container">
-            {newsData.filter(news =>
-              news.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-              news.description.toLowerCase().includes(searchTerm.toLowerCase())
-            ).map((news, index) => (
+            {newsData.map((news, index) => (
               <NewsCard
                 key={index}
                 title={news.title}
