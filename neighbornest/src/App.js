@@ -4,6 +4,7 @@ import Resident from './pages/Resident';
 import NewsCard from './components/NewsCard';
 import './components/NewsCard.css';
 import SearchBar from './components/SearchBar';
+import AdminEvents from './pages/AdminEvents';
 
 const newsData = [
   {
@@ -62,6 +63,7 @@ function App() {
               />
             ))}
           </div>
+          <AdminEvents/>
         </div>
       </div>
     </div>
