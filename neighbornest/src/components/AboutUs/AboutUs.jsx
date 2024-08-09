@@ -29,7 +29,7 @@ function AboutUs() {
         </ul>
 
         <img src="/images/rafiki.png" alt="Community Engagement" className="about-image" />
-        <img src="/images/Frame 492.png" alt="Neighborhood Building" className="about-image" />
+        <img src="/images/pexels-photo-3856042.jpeg" alt="Neighborhood Building" className="about-image" />
       </div>
 
       <footer className="contact-info">

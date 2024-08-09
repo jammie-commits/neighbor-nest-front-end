@@ -3,20 +3,31 @@ import './Neighborhood.css';
 
 const Neighborhood = () => {
     return (
-        <div className="Neighborhood">
-            
+        <div className="neighborhood">
             <div className="images">
                 <div className="image-card">
-                    <img src="image1_url" alt="Image 1" />
-                    <p>Image 1</p>
+                    <img src={`${process.env.PUBLIC_URL}/images/card-article.png`} alt="Neighborhood 1" />
+                    <p>Neighborhood 1</p>
                 </div>
                 <div className="image-card">
-                    <img src="image2_url" alt="Image 2" />
-                    <p>Image 2</p>
+                    <img src={`${process.env.PUBLIC_URL}/images/card-article.png`} alt="Neighborhood 2" />
+                    <p>Neighborhood 2</p>
                 </div>
                 <div className="image-card">
-                    <img src="image3_url" alt="Image 3" />
-                    <p>Image 3</p>
+                    <img src={`${process.env.PUBLIC_URL}/images/card-article.png`} alt="Neighborhood 3" />
+                    <p>Neighborhood 3</p>
+                </div>
+                <div className="image-card">
+                    <img src={`${process.env.PUBLIC_URL}/images/card-article.png`} alt="Neighborhood 4" />
+                    <p>Neighborhood 4</p>
+                </div>
+                <div className="image-card">
+                    <img src={`${process.env.PUBLIC_URL}/images/card-article.png`} alt="Neighborhood 5" />
+                    <p>Neighborhood 5</p>
+                </div>
+                <div className="image-card">
+                    <img src={`${process.env.PUBLIC_URL}/images/card-article.png`} alt="Neighborhood 6" />
+                    <p>Neighborhood 6</p>
                 </div>
             </div>
         </div>

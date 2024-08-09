@@ -1,69 +1,169 @@
-.dashboard1 {
-    margin: 20px;
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e3eaf0; /* light blue background */
 }
 
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2f4a5c; /* dark blue */
+    color: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    margin: 20px 0;
+}
+
+.sidebar .menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .menu li a:hover {
+    background-color: #1e3646; /* hover effect */
+}
+
+/* Content Area */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f6faff; /* light background */
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+    /* Center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the table within the content area */
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.search-bar .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Table */
 .table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden; /* Ensure rounded corners are visible */
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
 .table th, .table td {
-    padding: 15px 20px; /* Increased padding for better spacing */
     text-align: left;
-    border-bottom: 1px solid #e0e0e0; /* Light grey bottom border */
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
 }
 
 .table th {
-    background-color: #3498db; /* Modern blue shade */
-    color: #ffffff;
-    font-weight: bold;
+    background-color: #2f4a5c; /* dark blue header */
+    color: white;
 }
 
 .table td {
-    color: #333333; /* Darker text color for readability */
+    background-color: #ffffff;
 }
 
-.table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light grey for even rows */
+.table .status-verified {
+    color: #28a745; /* green */
+    font-weight: bold;
 }
 
-.table tr:hover {
-    background-color: #f1f1f1; /* Slightly darker grey for hover effect */
+.table .admin-info {
+    display: flex;
+    align-items: center;
 }
 
-.table tr {
-    border-bottom: 1px solid #e0e0e0; /* Adding a bottom border for each row */
+.table .admin-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.table th:nth-child(1), .table td:nth-child(1) {
-    width: 35%; /* Wider width for Name column */
+.table .neighborhood {
+    color: #5f6368; /* gray text */
 }
 
-.table th:nth-child(2), .table td:nth-child(2) {
-    width: 45%; /* Wider width for Email column */
+/* Settings & Logout */
+.settings, .logout {
+    margin-top: auto;
+    margin-bottom: 10px;
 }
 
-.table th:nth-child(3), .table td:nth-child(3) {
-    width: 20%; /* Narrower width for Status column */
+.settings a, .logout a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.table th:first-child {
-    border-top-left-radius: 8px; /* Rounded corners for top-left */
-}
-
-.table th:last-child {
-    border-top-right-radius: 8px; /* Rounded corners for top-right */
-}
-
-.table td:first-child {
-    border-bottom-left-radius: 8px; /* Rounded corners for bottom-left */
-}
-
-.table td:last-child {
-    border-bottom-right-radius: 8px; /* Rounded corners for bottom-right */
+.settings a:hover, .logout a:hover {
+    background-color: #1e3646; /* hover effect */
 }

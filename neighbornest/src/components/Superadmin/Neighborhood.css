@@ -1,18 +1,32 @@
-.image-grid {
+.neighborhood {
+    margin: 20px;
+}
+
+.images {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px; /* Space between images */
 }
 
-.image-grid-item {
-    width: calc(33.333% - 20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.image-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 200px; /* Adjust width as needed */
 }
 
-.image-grid-item img {
-    width: 100%;
+.image-card img {
+    width: 100%; /* Adjust size as needed */
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover; /* Ensures the image fits well */
+}
+
+.image-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 }

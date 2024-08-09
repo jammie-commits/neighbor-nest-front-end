@@ -18,7 +18,7 @@ const Contacts = () => {
       <div className="contact-container">
         <div className="contact-info">
           <h1>Let's Talk</h1>
-          <p>Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project and provide help.</p>
+          <p>"Have a suggestion, a question, or an idea? Contact us and help us make our neighborhood even better through seamless event planning and timely news sharing."</p>
           <h2>Email</h2>
           <p>beebsa@gmail.com</p>
           <h2>Socials</h2>
