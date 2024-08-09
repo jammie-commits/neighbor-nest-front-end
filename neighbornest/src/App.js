@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Resident from './pages/Resident';
 import NewsCard from './components/NewsCard';
@@ -34,39 +35,50 @@ function App() {
   const [searchTerm, setSearchTerm] = React.useState('');
 
   return (
-    <div className="App">
-      <div className="dashboard">
-        <h2>Dashboard</h2>
-        <ul className="dashboard-shortcuts">
-          <li><a href="/activity">Activity</a></li>
-          <li><a href="/submissions">Submissions</a></li>
-          <li><a href="/settings">Settings</a></li>
-          <li><a href="/logout">Logout</a></li>
-        </ul>
-      </div>
-      <div className="main-content">
-        <div className="user-profile-container">
-          <span className="user-profile-name">John Rambo</span>
+    <Router>
+      <div className="App">
+        <div className="dashboard">
+          <h2>Dashboard</h2>
+          <ul className="dashboard-shortcuts">
+            <li><a href="/activity">Activity</a></li>
+            <li><a href="/submissions">Submissions</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/admin-events">Admin Events</a></li>
+          </ul>
         </div>
-        <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        <div className="news-container">
-          <Resident />
-          <div className="news-card-container">
-            {newsData.map((news, index) => (
-              <NewsCard
-                key={index}
-                title={news.title}
-                description={news.description}
-                imageUrl={news.imageUrl}
-                author={news.author}
-                date={news.date}
-              />
-            ))}
+        <div className="main-content">
+          <div className="user-profile-container">
+            <span className="user-profile-name">John Rambo</span>
           </div>
-          <AdminEvents/>
+          <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div className="news-container">
+                  <Resident />
+                  <div className="news-card-container">
+                    {newsData.map((news, index) => (
+                      <NewsCard
+                        key={index}
+                        title={news.title}
+                        description={news.description}
+                        imageUrl={news.imageUrl}
+                        author={news.author}
+                        date={news.date}
+                      />
+                    ))}
+                  </div>
+                </div>
+              }
+            />
+            <Route path="/admin-events" element={<AdminEvents />} />
+          </Routes>
         </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
