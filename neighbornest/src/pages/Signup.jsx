@@ -39,7 +39,7 @@ export default function Signup() {
                 <span className='agree-terms-policy-c'>I agree to the </span>
                 <Link to="./terms-and-conditions" className='terms-policy-d'>terms and policy</Link>
               </div>
-              <div className='rectangle' />
+              <div className='signup-rectangle' />
             </div>
           </div>
           <button className='frame-d'>
