@@ -3,8 +3,8 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import Dashboard1 from './Dashboard1';
-import Admin from './Admin'; // Import only once
-import Neighborhood from './Neighborhood'; // Import only once
+import Admin from './Admin';
+import Neighborhood from './Neighborhood';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -33,3 +33,4 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
