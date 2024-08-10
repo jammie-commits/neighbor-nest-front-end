@@ -145,10 +145,10 @@ body {
 }
 
 .table .neighborhood {
-    color: #5f6368; /* gray text */
+    color: #5f6368; 
 }
 
-/* Settings & Logout */
+
 .settings, .logout {
     margin-top: auto;
     margin-bottom: 10px;

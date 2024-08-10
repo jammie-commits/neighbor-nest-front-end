@@ -5,7 +5,7 @@
 .images {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between images */
+    gap: 20px;
 }
 
 .image-card {
@@ -15,14 +15,14 @@
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 200px; /* Adjust width as needed */
+    width: 200px; 
 }
 
 .image-card img {
-    width: 100%; /* Adjust size as needed */
+    width: 100%;
     height: auto;
-    border-radius: 8px; /* Rounded corners */
-    object-fit: cover; /* Ensures the image fits well */
+    border-radius: 8px; 
+    object-fit: cover; 
 }
 
 .image-card p {

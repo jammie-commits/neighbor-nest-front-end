@@ -12,7 +12,7 @@ const Topbar = () => {
                 <div className="notifications">
                     <FontAwesomeIcon icon={faBell} />
                 </div>
-                <Link to="/profile" className="user-info"> {/* Link to the ProfilePage */}
+                <Link to="/profile" className="user-info">
                     <span>Katie</span>
                     <img src="user_profile_image_url" alt="User" />
                 </Link>

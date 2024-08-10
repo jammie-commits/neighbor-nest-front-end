@@ -11,7 +11,7 @@
     top: 0;
     left: 250px;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .topbar input[type="text"] {
@@ -44,7 +44,7 @@
 }
 
 .notifications .fa-bell {
-    font-size: 24px; /* Size of the bell icon */
+    font-size: 24px; 
 }
 
 .user-info {
