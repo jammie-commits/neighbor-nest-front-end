@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Dashboard1.css';
 
 const Dashboard1 = () => {
+    const [users, setUsers] = useState([]);
+
+    // Fetching data from the API
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/api/users');
+                if (response.ok) {
+                    const data = await response.json();
+                    setUsers(data);
+                } else {
+                    console.error('Failed to fetch data');
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <div className="dashboard1">
             <table>
@@ -13,36 +34,13 @@ const Dashboard1 = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td>john@example.com</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>Jane Smith</td>
-                        <td>jane@example.com</td>
-                        <td>Inactive</td>
-                    </tr>
-                    <tr>
-                        <td>Emily Johnson</td>
-                        <td>emily@example.com</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>Michael Brown</td>
-                        <td>michael@example.com</td>
-                        <td>Pending</td>
-                    </tr>
-                    <tr>
-                        <td>Sarah Wilson</td>
-                        <td>sarah@example.com</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>David Lee</td>
-                        <td>david@example.com</td>
-                        <td>Inactive</td>
-                    </tr>
+                    {users.map((user) => (
+                        <tr key={user.id}>
+                            <td>{user.name}</td>
+                            <td>{user.email}</td>
+                            <td>{user.status}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
