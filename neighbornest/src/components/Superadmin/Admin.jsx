@@ -35,7 +35,7 @@ const Admin = () => {
                     <h3>David Johnson</h3>
                     <p>david@example.com</p>
                 </div>
-                {/* Add more user cards as needed */}
+                
             </div>
         </div>
     );
