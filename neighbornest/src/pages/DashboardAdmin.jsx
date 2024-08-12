@@ -7,10 +7,13 @@ import Profile from "../components/Profile";
 import SearchNormal from "../components/SearchNormal";
 import Settings from "../components/Settings";
 import "../DashboardAdmin.css";
+import logo from "../assets/logo.png"
 
 function DashboardAdmin1() {
     return (
     <div className="dashboard-admin">
+
+      
       <div className="div">
         <div className="frame">
           <div className="frame-2">
@@ -154,11 +157,7 @@ function DashboardAdmin1() {
           <img className="line" alt="Line" src="line-1-7.svg" />
         </div>
         <div className="frame-6">
-          <img
-            className="white-and-black"
-            alt="White and black"
-            src="white-and-black-modern-abstract-beauty-logo-removebg-preview-1.png"
-          />
+          <img className="white-and-black" src ={logo} alt = "logo"/>
           <div className="frame-7">
             <div className="frame-8">
               <Settings className="icon-instance-node" />
