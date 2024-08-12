@@ -28,6 +28,9 @@ nav {
     width: 100%;
     margin-top: 140px; 
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adjust content distribution */
 }
 
 nav ul {
@@ -38,6 +41,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1; /* Make sure the nav takes available space */
 }
 
 nav ul li {
@@ -64,15 +68,29 @@ nav ul li:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.logout-button {
+/* Add this section for settings and logout */
+.settings-button, .logout-button {
     width: 100%;
     padding: 15px 0;
     background-color: #e74c3c;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    color: white;
 }
 
-.logout-button:hover {
+.settings-button:hover, .logout-button:hover {
     background-color: #c0392b;
+}
+
+.settings-button {
+    margin-bottom: 10px; /* Space between settings and logout */
+}
+
+.settings-button a, .logout-button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
