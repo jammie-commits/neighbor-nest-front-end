@@ -40,6 +40,69 @@
         "location": "Neighborhood",
         "status": "Verified"
       }
-    ]
+    ],
+    "news": [
+    {
+      "news_id": 1,
+      "title": "Community Garden Opening",
+      "content": "Our community garden is finally opening! Join us for the ribbon-cutting ceremony.",
+      "image_url": "https://example.com/garden.jpg",
+      "status": "Published",
+      "user_id": 1,
+      "neighborhood_id": 1,
+      "admin_approved": true,
+      "created_at": "2024-07-20 10:00:00",
+      "updated_at": "2024-07-20 10:00:00"
+    },
+    {
+      "news_id": 2,
+      "title": "Safety Tips for Halloween",
+      "content": "Learn how to keep your kids safe while trick-or-treating this Halloween.",
+      "image_url": "https://example.com/halloween.jpg",
+      "status": "Published",
+      "user_id": 2,
+      "neighborhood_id": 1,
+      "admin_approved": true,
+      "created_at": "2024-08-01 15:30:00",
+      "updated_at": "2024-08-01 15:30:00"
+    },
+    {
+      "news_id": 3,
+      "title": "Annual Block Party Recap",
+      "content": "Here's what you missed at our annual block party!",
+      "image_url": "https://example.com/blockparty.jpg",
+      "status": "Published",
+      "user_id": 3,
+      "neighborhood_id": 2,
+      "admin_approved": true,
+      "created_at": "2024-07-25 15:00:00",
+      "updated_at": "2024-07-25 15:00:00"
+    },
+    {
+      "news_id": 4,
+      "title": "Winter Coat Drive",
+      "content": "Donate your gently used coats to those in need this winter.",
+      "image_url": "https://example.com/coatdrive.jpg",
+      "status": "Published",
+      "user_id": 4,
+      "neighborhood_id": 2,
+      "admin_approved": true,
+      "created_at": "2024-09-15 08:00:00",
+      "updated_at": "2024-09-15 08:00:00"
+    },
+    {
+      "news_id": 5,
+      "title": "New Year Celebration Plans",
+      "content": "Join us as we plan for the New Year celebration. Your input is valuable!",
+      "image_url": "https://example.com/newyear.jpg",
+      "status": "Published",
+      "user_id": 5,
+      "neighborhood_id": 3,
+      "admin_approved": true,
+      "created_at": "2024-12-20 18:00:00",
+      "updated_at": "2024-12-20 18:00:00"
+    }
+  ]
+    
   }
   
