@@ -6,6 +6,7 @@ import Dashboard1 from './Dashboard1';
 import Admin from './Admin';
 import Neighborhood from './Neighborhood';
 import './Dashboard.css';
+import Settings from '../Settings';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ const Dashboard = () => {
                         <Route path="/dashboard1" element={<Dashboard1 />} />
                         <Route path="/admin" element={<Admin />} />
                         <Route path="/neighborhood" element={<Neighborhood />} />
+
                     </Routes>
                 </div>
             </div>
