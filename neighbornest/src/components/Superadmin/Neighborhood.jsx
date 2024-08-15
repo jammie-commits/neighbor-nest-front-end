@@ -8,9 +8,9 @@ const Neighborhood = () => {
     const [isAdding, setIsAdding] = useState(false);
     const [newNeighborhood, setNewNeighborhood] = useState({ name: '', image: '', description: '' });
 
-    // Fetch neighborhoods from the backend when the component mounts
+    
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/api/neighborhoods')
+        fetch('https://neighbour-nest.onrender.com/neighborhoods')
             .then(response => response.json())
             .then(data => setNeighborhoods(data))
             .catch(error => console.error('Error fetching neighborhoods:', error));
@@ -22,7 +22,7 @@ const Neighborhood = () => {
     };
 
     const handleDeleteClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/neighborhoods/${id}`, { method: 'DELETE' })
+        fetch(`https://neighbour-nest.onrender.com/neighborhoods/${id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {
                     setNeighborhoods(neighborhoods.filter((neighborhood) => neighborhood.id !== id));
@@ -33,7 +33,7 @@ const Neighborhood = () => {
     };
 
     const handleSaveClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/neighborhoods/${id}`, {
+        fetch(`https://neighbour-nest.onrender.com/neighborhoods/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const Neighborhood = () => {
     };
 
     const handleAddNewNeighborhood = () => {
-        fetch('http://127.0.0.1:5000/api/neighborhoods', {
+        fetch('https://neighbour-nest.onrender.com/neighborhoods', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

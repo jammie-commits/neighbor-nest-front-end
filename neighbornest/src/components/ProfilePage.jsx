@@ -15,7 +15,6 @@ function ProfilePage() {
   const [editing, setEditing] = useState(false);
 
   useEffect(() => {
-    // Simulating fetching user data after login
     const userData = JSON.parse(localStorage.getItem('userProfile')) || {
       fullName: 'John Doe',
       email: 'john@example.com',

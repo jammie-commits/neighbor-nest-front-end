@@ -4,25 +4,25 @@ import styles from './Admin.module.css';
 const Admin = () => {
     const [users, setUsers] = useState([]);
     const [editingId, setEditingId] = useState(null);
-    const [editedUser, setEditedUser] = useState({ name: '', email: '', neighborhood: '', picture: '' });
+    const [editedAdmin, setEditedAdmin] = useState({ name: '', email: '', neighborhood: '', picture: '' });
     const [isAdding, setIsAdding] = useState(false);
-    const [newUser, setNewUser] = useState({ name: '', email: '', neighborhood: '', picture: '' });
+    const [newAdmin, setNewAdmin] = useState({ name: '', email: '', neighborhood: '', picture: '' });
 
-    // Fetch the admins from the backend when the component mounts
+
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/api/admins')
+        fetch('https://neighbour-nest.onrender.com/users')
             .then(response => response.json())
             .then(data => setUsers(data))
-            .catch(error => console.error('Error fetching admins:', error));
+            .catch(error => console.error('Error fetching users:', error));
     }, []);
 
     const handleEditClick = (user) => {
         setEditingId(user.id);
-        setEditedUser({ name: user.name, email: user.email, neighborhood: user.neighborhood, picture: user.picture });
+        setEditedAdmin({ name: user.name, email: user.email, neighborhood: user.neighborhood, picture: user.picture });
     };
 
     const handleDeleteClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/admins/${id}`, { method: 'DELETE' })
+        fetch(`https://neighbour-nest.onrender.com/admins/${id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {
                     setUsers(users.filter((user) => user.id !== id));
@@ -33,23 +33,23 @@ const Admin = () => {
     };
 
     const handleSaveClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/admins/${id}`, {
+        fetch(`https://neighbour-nest.onrender.com/admins/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(editedUser),
+            body: JSON.stringify(editedAdmin),
         })
             .then(response => response.json())
-            .then(updatedUser => {
-                setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
+            .then(updatedAdmin => {
+                setUsers(users.map((user) => (user.id === id ? updatedAdmin : user)));
                 setEditingId(null);
             })
             .catch(error => console.error('Error updating admin:', error));
     };
 
     const handleChange = (e) => {
-        setEditedUser({ ...editedUser, [e.target.name]: e.target.value });
+        setEditedAdmin({ ...editedAdmin, [e.target.name]: e.target.value });
     };
 
     const handleFileChange = (e) => {
@@ -57,29 +57,29 @@ const Admin = () => {
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setEditedUser({ ...editedUser, picture: reader.result });
+                setEditedAdmin({ ...editedAdmin, picture: reader.result });
             };
             reader.readAsDataURL(file);
         }
     };
 
-    const handleNewUserChange = (e) => {
+    const handleNewAdminChange = (e) => {
         const { name, value } = e.target;
-        setNewUser({ ...newUser, [name]: value });
+        setNewAdmin({ ...newAdmin, [name]: value });
     };
 
-    const handleAddNewUser = () => {
-        fetch('http://127.0.0.1:5000/api/admins', {
+    const handleAddNewAdmin = () => {
+        fetch('https://neighbour-nest.onrender.com/admins', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newUser),
+            body: JSON.stringify(newAdmin),
         })
             .then(response => response.json())
-            .then(addedUser => {
-                setUsers([...users, addedUser]);
-                setNewUser({ name: '', email: '', neighborhood: '', picture: '' });
+            .then(addedAdmin => {
+                setUsers([...users, addedAdmin]);
+                setNewAdmin({ name: '', email: '', neighborhood: '', picture: '' });
                 setIsAdding(false);
             })
             .catch(error => console.error('Error adding admin:', error));
@@ -94,14 +94,14 @@ const Admin = () => {
             {isAdding && (
                 <div className={styles['add-admin-form']}>
                     <h2>Add Admin</h2>
-                    <form onSubmit={(e) => { e.preventDefault(); handleAddNewUser(); }}>
+                    <form onSubmit={(e) => { e.preventDefault(); handleAddNewAdmin(); }}>
                         <div>
                             <label>Name:</label>
                             <input
                                 type="text"
                                 name="name"
-                                value={newUser.name}
-                                onChange={handleNewUserChange}
+                                value={newAdmin.name}
+                                onChange={handleNewAdminChange}
                                 required
                             />
                         </div>
@@ -110,8 +110,8 @@ const Admin = () => {
                             <input
                                 type="email"
                                 name="email"
-                                value={newUser.email}
-                                onChange={handleNewUserChange}
+                                value={newAdmin.email}
+                                onChange={handleNewAdminChange}
                                 required
                             />
                         </div>
@@ -120,8 +120,8 @@ const Admin = () => {
                             <input
                                 type="text"
                                 name="neighborhood"
-                                value={newUser.neighborhood}
-                                onChange={handleNewUserChange}
+                                value={newAdmin.neighborhood}
+                                onChange={handleNewAdminChange}
                                 required
                             />
                         </div>
@@ -148,7 +148,7 @@ const Admin = () => {
                                     <input
                                         type="text"
                                         name="name"
-                                        value={editedUser.name}
+                                        value={editedAdmin.name}
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -157,7 +157,7 @@ const Admin = () => {
                                     <input
                                         type="email"
                                         name="email"
-                                        value={editedUser.email}
+                                        value={editedAdmin.email}
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -166,7 +166,7 @@ const Admin = () => {
                                     <input
                                         type="text"
                                         name="neighborhood"
-                                        value={editedUser.neighborhood}
+                                        value={editedAdmin.neighborhood}
                                         onChange={handleChange}
                                     />
                                 </div>
