@@ -1,0 +1,50 @@
+.submissionContainer {
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 300px; /* Adjust to ensure it doesn't overlap with the sidebar */
+  max-width: calc(100% - 300px); /* Adjust the width based on your layout */
+  box-sizing: border-box;
+}
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between event items */
+}
+
+.eventItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f4f8fa; /* Light background color for items */
+}
+
+.requestDescription {
+  font-size: 16px;
+  color: #333;
+}
+
+.statusButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.statusButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #c8f7c5; /* Light green background for the status */
+  color: #008000; /* Dark green text */
+  font-size: 14px;
+  cursor: default; /* Cursor style for non-clickable status */
+}
+  
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px; /* Adjust padding as needed */
+  margin-bottom: 20px;
+}
