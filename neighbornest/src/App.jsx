@@ -16,6 +16,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/dashboard/*" element={<Dashboard />} /> 
           <Route path="/profile" element={<ProfilePage />} />
+          
         </Routes>
       </div>
     </Router>
