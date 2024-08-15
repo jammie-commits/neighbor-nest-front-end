@@ -10,7 +10,7 @@ const Admin = () => {
 
 
     useEffect(() => {
-        fetch('https://neighbour-nest.onrender.com/users')
+        fetch('http://127.0.0.1:5000/api/users')
             .then(response => response.json())
             .then(data => setUsers(data))
             .catch(error => console.error('Error fetching users:', error));
@@ -22,7 +22,7 @@ const Admin = () => {
     };
 
     const handleDeleteClick = (id) => {
-        fetch(`https://neighbour-nest.onrender.com/admins/${id}`, { method: 'DELETE' })
+        fetch(`http://127.0.0.1:5000/api/admins/${id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {
                     setUsers(users.filter((user) => user.id !== id));
@@ -33,7 +33,7 @@ const Admin = () => {
     };
 
     const handleSaveClick = (id) => {
-        fetch(`https://neighbour-nest.onrender.com/admins/${id}`, {
+        fetch(`http://127.0.0.1:5000/api/admins/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const Admin = () => {
     };
 
     const handleAddNewAdmin = () => {
-        fetch('https://neighbour-nest.onrender.com/admins', {
+        fetch('http://127.0.0.1:5000/api/admins', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
