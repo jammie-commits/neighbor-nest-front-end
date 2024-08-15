@@ -1,0 +1,38 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+}
+
+.header-search-container {
+  flex: 1;
+  text-align: center;
+}
+
+.header-search-bar {
+  width: 50%;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.header-profile-notification {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-profile img, .header-notification img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-search-bar {
+    width: 70%;
+  }
+}
