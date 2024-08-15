@@ -2,7 +2,6 @@ import React from 'react';
 import ResidentSidebar from '../components/residents/ResidentSidebar';
 import NewsCard from '../components/residents/NewsCard';
 import Topbar from '../components/Superadmin/Topbar';
-
 const ResidentDashboard = () => {
   return (
     <div>

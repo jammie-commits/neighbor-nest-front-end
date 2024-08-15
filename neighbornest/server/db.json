@@ -1,47 +1,102 @@
 {
-    "events": [
-      {
-        "event_id": 1,
-        "title": "Barbeque at the rooftop",
-        "description": "Join us for a barbeque at the rooftop from 10pm on 12/07/25.",
-        "date": "2024-07-12T22:00:00Z",
-        "location": "Rooftop",
-        "status": "Verified"
-      },
-      {
-        "event_id": 2,
-        "title": "Community Cleanup",
-        "description": "Help us clean up the neighborhood on 12/08/25.",
-        "date": "2024-08-12T08:00:00Z",
-        "location": "Main Street",
-        "status": "Pending"
-      },
-      {
-        "event_id": 3,
-        "title": "Neighborhood Watch Meeting",
-        "description": "Monthly meeting to discuss neighborhood safety and security.",
-        "date": "2024-09-01T18:00:00Z",
-        "location": "Community Center",
-        "status": "Verified"
-      },
-      {
-        "event_id": 4,
-        "title": "Summer Block Party",
-        "description": "Annual block party with food, games, and live music.",
-        "date": "2024-07-25T15:00:00Z",
-        "location": "Maple Street",
-        "status": "Pending"
-      },
-      {
-        "event_id": 5,
-        "title": "Holiday Decorations Contest",
-        "description": "Decorate your house for the holidays and enter to win a prize!",
-        "date": "2024-12-15T17:00:00Z",
-        "location": "Neighborhood",
-        "status": "Verified"
-      }
-    ],
-    "news": [
+  "events": [
+    {
+      "event_id": 1,
+      "title": "Barbeque at the Rooftop",
+      "description": "Join us for a barbeque at the rooftop from 10pm on 12/07/25.",
+      "date": "2024-07-12T22:00:00Z",
+      "location": "Rooftop",
+      "status": "Verified"
+    },
+    {
+      "event_id": 2,
+      "title": "Community Cleanup",
+      "description": "Help us clean up the neighborhood on 12/08/25.",
+      "date": "2024-08-12T08:00:00Z",
+      "location": "Main Street",
+      "status": "Pending"
+    },
+    {
+      "event_id": 3,
+      "title": "Neighborhood Watch Meeting",
+      "description": "Monthly meeting to discuss neighborhood safety and security.",
+      "date": "2024-09-01T18:00:00Z",
+      "location": "Community Center",
+      "status": "Verified"
+    },
+    {
+      "event_id": 4,
+      "title": "Summer Block Party",
+      "description": "Annual block party with food, games, and live music.",
+      "date": "2024-07-25T15:00:00Z",
+      "location": "Maple Street",
+      "status": "Pending"
+    },
+    {
+      "event_id": 5,
+      "title": "Holiday Decorations Contest",
+      "description": "Decorate your house for the holidays and enter to win a prize!",
+      "date": "2024-12-15T17:00:00Z",
+      "location": "Neighborhood",
+      "status": "Verified"
+    },
+    {
+      "event_id": 6,
+      "title": "Spring Gardening Workshop",
+      "description": "Learn tips and tricks for spring gardening at our workshop.",
+      "date": "2024-04-10T10:00:00Z",
+      "location": "Community Garden",
+      "status": "Verified"
+    },
+    {
+      "event_id": 7,
+      "title": "Autumn Festival",
+      "description": "Celebrate the fall season with games, food, and music.",
+      "date": "2024-10-20T13:00:00Z",
+      "location": "Central Park",
+      "status": "Pending"
+    },
+    {
+      "event_id": 8,
+      "title": "Dog Parade",
+      "description": "Bring your furry friends for a fun dog parade in the park.",
+      "date": "2024-06-15T09:00:00Z",
+      "location": "Dog Park",
+      "status": "Verified"
+    },
+    {
+      "event_id": 9,
+      "title": "Book Club Meeting",
+      "description": "Discuss the latest book selection with fellow readers.",
+      "date": "2024-05-05T19:00:00Z",
+      "location": "Library",
+      "status": "Verified"
+    },
+    {
+      "event_id": 10,
+      "title": "Art Exhibition",
+      "description": "Explore the latest artworks by local artists.",
+      "date": "2024-11-11T16:00:00Z",
+      "location": "Art Gallery",
+      "status": "Pending"
+    },
+    {
+      "id": "d822",
+      "title": "",
+      "content": "chipo party"
+    },
+    {
+      "id": "a6f8",
+      "title": "",
+      "content": "chipo party"
+    },
+    {
+      "id": "8d55",
+      "title": "Pono",
+      "description": "Nginyo"
+    }
+  ],
+  "news": [
     {
       "news_id": 1,
       "title": "Community Garden Opening",
@@ -101,8 +156,66 @@
       "admin_approved": true,
       "created_at": "2024-12-20 18:00:00",
       "updated_at": "2024-12-20 18:00:00"
+    },
+    {
+      "news_id": 6,
+      "title": "Local Business Spotlight",
+      "content": "Check out our feature on a local business doing great things in the community.",
+      "image_url": "https://example.com/business.jpg",
+      "status": "Published",
+      "user_id": 6,
+      "neighborhood_id": 1,
+      "admin_approved": true,
+      "created_at": "2024-07-10 12:00:00",
+      "updated_at": "2024-07-10 12:00:00"
+    },
+    {
+      "news_id": 7,
+      "title": "Tips for Winterizing Your Home",
+      "content": "Get your home ready for the winter with these helpful tips.",
+      "image_url": "https://example.com/winter.jpg",
+      "status": "Published",
+      "user_id": 7,
+      "neighborhood_id": 1,
+      "admin_approved": true,
+      "created_at": "2024-11-05 09:00:00",
+      "updated_at": "2024-11-05 09:00:00"
+    },
+    {
+      "news_id": 8,
+      "title": "Summer Safety Reminders",
+      "content": "Stay safe this summer with these important reminders.",
+      "image_url": "https://example.com/summer.jpg",
+      "status": "Published",
+      "user_id": 8,
+      "neighborhood_id": 2,
+      "admin_approved": true,
+      "created_at": "2024-06-01 14:00:00",
+      "updated_at": "2024-06-01 14:00:00"
+    },
+    {
+      "news_id": 9,
+      "title": "Volunteers Needed for Food Drive",
+      "content": "Sign up to help with our upcoming food drive. Every bit helps!",
+      "image_url": "https://example.com/fooddrive.jpg",
+      "status": "Published",
+      "user_id": 9,
+      "neighborhood_id": 3,
+      "admin_approved": true,
+      "created_at": "2024-10-15 11:00:00",
+      "updated_at": "2024-10-15 11:00:00"
+    },
+    {
+      "news_id": 10,
+      "title": "Community Survey Results",
+      "content": "See the results from our recent community survey.",
+      "image_url": "https://example.com/survey.jpg",
+      "status": "Published",
+      "user_id": 10,
+      "neighborhood_id": 3,
+      "admin_approved": true,
+      "created_at": "2024-03-01 17:00:00",
+      "updated_at": "2024-03-01 17:00:00"
     }
   ]
-    
-  }
-  
+}

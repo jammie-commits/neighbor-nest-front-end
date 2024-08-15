@@ -1,31 +1,38 @@
+// components/residents/NewsCard.js
 import React, { useEffect, useState } from 'react';
-import './NewsCard.css';
+import styles from './NewsCard.module.css'; // Import the CSS module
 
-function NewsCard() {
-  const [news, setNews] = useState([]);
+const NewsCard = () => {
+  const [newsItems, setNewsItems] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/news')
-      .then(response => response.json())
-      .then(data => setNews(data))
-      .catch(error => console.error('Error fetching news:', error));
+    const fetchNews = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/news');
+        const data = await response.json();
+        setNewsItems(data);
+      } catch (error) {
+        console.error('Error fetching news:', error);
+      }
+    };
+
+    fetchNews();
   }, []);
 
   return (
-    <div className="news-cards-container">
-      {news.map((item) => (
-        <div key={item.news_id} className="news-card">
-          <img src={item.image_url} alt={item.title} className="news-card-image" />
-          <div className="news-card-content">
-            <h3 className="news-card-title">{item.title}</h3>
-            <p className="news-card-description">{item.content}</p>
-            <p className="news-card-author">Author ID: {item.user_id}</p>
-            <p className="news-card-date">Date: {item.created_at}</p>
+    <div className={styles.newsCardsContainer}>
+      {newsItems.map(news => (
+        <div key={news.news_id} className={styles.card}>
+          <img src={news.image_url} alt={news.title} className={styles.cardImage} />
+          <h3>{news.title}</h3>
+          <p>{news.content}</p>
+          <div className={styles.goCorner}>
+            <span className={styles.goArrow}>→</span>
           </div>
         </div>
       ))}
     </div>
   );
-}
+};
 
 export default NewsCard;
