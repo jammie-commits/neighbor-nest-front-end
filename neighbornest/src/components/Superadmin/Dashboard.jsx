@@ -2,10 +2,10 @@ import React from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
-import Dashboard1 from './Dashboard1';
 import Admin from './Admin';
 import Neighborhood from './Neighborhood';
-import './Dashboard.css';
+import Logout from './Logout';
+import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -15,16 +15,15 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="dashboard">
+        <div className={styles.dashboard}>
             <Sidebar setView={handleViewChange} />
-            <div className="main-content">
+            <div className={styles['main-content']}>
                 <Topbar />
-                <div className="content">
+                <div className={styles.content}>
                     <Routes>
-                        <Route path="/" element={<Dashboard1 />} />
-                        <Route path="/dashboard1" element={<Dashboard1 />} />
                         <Route path="/admin" element={<Admin />} />
                         <Route path="/neighborhood" element={<Neighborhood />} />
+                        <Route path="/logout" element={<Logout />} />
                     </Routes>
                 </div>
             </div>
@@ -33,4 +32,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

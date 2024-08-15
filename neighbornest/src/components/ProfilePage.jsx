@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-import './ProfilePage.css';
+import styles from './ProfilePage.module.css';
 
 function ProfilePage() {
   const navigate = useNavigate();
@@ -11,11 +11,19 @@ function ProfilePage() {
     email: '',
     gender: '',
     profileImage: '/path_to_profile_image',
-    phone: '',
-    address: '',
   });
   const [editing, setEditing] = useState(false);
 
+  useEffect(() => {
+    // Simulating fetching user data after login
+    const userData = JSON.parse(localStorage.getItem('userProfile')) || {
+      fullName: 'John Doe',
+      email: 'john@example.com',
+      gender: 'Male',
+      profileImage: '/path_to_profile_image',
+    };
+    setProfileData(userData);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -25,30 +33,49 @@ function ProfilePage() {
     }));
   };
 
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileData((prevData) => ({
+          ...prevData,
+          profileImage: reader.result,
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSave = (e) => {
+    e.preventDefault();
+    localStorage.setItem('userProfile', JSON.stringify(profileData));
+    setEditing(false);
+  };
 
   const handleBackClick = () => {
     navigate(-1);
   };
 
   return (
-    <div className="profile-page">
-      <div className="profile-card">
-        <div className="profile-header">
-          <FontAwesomeIcon icon={faArrowLeft} className="arrow-icon" onClick={handleBackClick} /> {/* Add the arrow icon here */}
-          <img src="/images/White_And_Black_Modern_Abstract_Beauty_Logo-removebg-preview 1 (1).png" alt="Logo" className="profile-logo" />
-          <button className="edit-button" onClick={() => setEditing(!editing)}>
+    <div className={styles['profile-page']}>
+      <div className={styles['profile-card']}>
+        <div className={styles['profile-header']}>
+          <FontAwesomeIcon icon={faArrowLeft} className={styles['arrow-icon']} onClick={handleBackClick} />
+          <img src="/images/White_And_Black_Modern_Abstract_Beauty_Logo-removebg-preview 1 (1).png" alt="Logo" className={styles['profile-logo']} />
+          <button className={styles['edit-button']} onClick={() => setEditing(!editing)}>
             {editing ? 'Cancel' : 'Edit'}
           </button>
         </div>
-        <div className="profile-info">
-          <img src={profileData.profileImage} alt="Profile" className="profile-image" />
-          <div className="profile-details">
+        <div className={styles['profile-info']}>
+          <img src={profileData.profileImage} alt="Profile" className={styles['profile-image']} />
+          <div className={styles['profile-details']}>
             <h2>{profileData.fullName}</h2>
             <p>{profileData.email}</p>
           </div>
         </div>
         {editing ? (
-          <form className="profile-form">
+          <form className={styles['profile-form']} onSubmit={handleSave}>
             <label>Full Name</label>
             <input
               type="text"
@@ -56,6 +83,7 @@ function ProfilePage() {
               value={profileData.fullName}
               onChange={handleInputChange}
               placeholder="Your Full Name"
+              required
             />
             
             <label>Email</label>
@@ -65,55 +93,46 @@ function ProfilePage() {
               value={profileData.email}
               onChange={handleInputChange}
               placeholder="Your Email"
+              required
             />
 
             <label>Gender</label>
-            <input
-              type="text"
+            <select
               name="gender"
               value={profileData.gender}
               onChange={handleInputChange}
-              placeholder="Your Gender"
+              required
+            >
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Rather Not Say">Rather Not Say</option>
+            </select>
+
+            <label>Upload Profile Picture</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
             />
 
-            <div className="email-section">
-              <h3>My Email Address</h3>
-              <p className="email-item">{profileData.email}</p>
-              <button type="button" className="add-email-button">+ Add Email Address</button>
-            </div>
-
-            <button type="submit" className="save-button">Save</button>
+            <button type="submit" className={styles['save-button']}>Save</button>
           </form>
         ) : (
-          <div className="profile-form">
+          <div className={styles['profile-form']}>
             <label>Full Name</label>
-            <input type="text" value={profileData.fullName} placeholder="Your Full Name" />
+            <input type="text" value={profileData.fullName} placeholder="Your Full Name" readOnly />
             
             <label>Email</label>
-            <input type="email" value={profileData.email} placeholder="Your Email" />
+            <input type="email" value={profileData.email} placeholder="Your Email" readOnly />
 
             <label>Gender</label>
-            <input type="text" value={profileData.gender} placeholder="Your Gender" />
-
-            <div className="email-section">
-              <h3>My Email Address</h3>
-              <p className="email-item">{profileData.email}</p>
-              <p className="email-time">1 month ago</p>
-              <button type="button" className="add-email-button">+ Add Email Address</button>
-            </div>
+            <input type="text" value={profileData.gender} placeholder="Your Gender" readOnly />
           </div>
         )}
-      </div>
-
-      <div className="contacts">
-        <h3>Contacts</h3>
-        <p><strong>Phone:</strong> {profileData.phone}</p>
-        <p><strong>Email:</strong> {profileData.email}</p>
-        <p><strong>Address:</strong> {profileData.address}</p>
       </div>
     </div>
   );
 }
 
 export default ProfilePage;
-
