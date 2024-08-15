@@ -1,0 +1,150 @@
+/* Admin Form Styles */
+.admin {
+    margin: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #34495e;
+    padding: 1px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.add-admin-form {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.add-admin-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-admin-form form div {
+    margin-bottom: 15px;
+}
+
+.add-admin-form form label {
+    font-weight: bold;
+    color: #4A90E2;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.add-admin-form form input[type="text"],
+.add-admin-form form input[type="file"],
+.add-admin-form form textarea,
+.add-admin-form form select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f4f4f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-admin-form form input[type="text"]:focus,
+.add-admin-form form input[type="file"]:focus,
+.add-admin-form form textarea:focus,
+.add-admin-form form select:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+.add-admin-form form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.add-admin-form form button {
+    padding: 12px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-admin-form form button:hover {
+    background-color: #357ABD;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Neighborhood Form Styles */
+.add-neighborhood-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.add-neighborhood-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-neighborhood-form form div {
+    margin-bottom: 15px;
+}
+
+.add-neighborhood-form form label {
+    font-weight: bold;
+    color: #4A90E2;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.add-neighborhood-form form input[type="text"],
+.add-neighborhood-form form input[type="file"],
+.add-neighborhood-form form textarea,
+.add-neighborhood-form form select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #f4f4f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-neighborhood-form form input[type="text"]:focus,
+.add-neighborhood-form form input[type="file"]:focus,
+.add-neighborhood-form form textarea:focus,
+.add-neighborhood-form form select:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+.add-neighborhood-form form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.add-neighborhood-form form button {
+    padding: 12px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-neighborhood-form form button:hover {
+    background-color: #357ABD;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
