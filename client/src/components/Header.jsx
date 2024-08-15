@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import '../styles/LandingPage.css';
-=======
-import '../LandingPage.css';
->>>>>>> arnold2
 
 export default function Header() {
   return (

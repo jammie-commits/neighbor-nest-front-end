@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import '../styles/Profile.css';
 
@@ -117,14 +116,3 @@ const Profile = () => {
 };
 
 export default Profile;
-=======
-import React from 'react'
-
-function Profile() {
-  return (
-    <div></div>
-  )
-}
-
-export default Profile
->>>>>>> arnold2

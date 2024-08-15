@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import '../styles/Login.css';
-=======
-import '../Login.css';
->>>>>>> arnold2
 import { Link } from 'react-router-dom';
 
 export default function LoginPage() {

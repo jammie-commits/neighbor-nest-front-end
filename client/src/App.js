@@ -3,14 +3,6 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
-<<<<<<< HEAD
-import Login from './pages/Login'; 
-import Signup from './pages/Signup';
-
-
-
-=======
-
 import Login from './pages/Login'; 
 import Signup from './pages/Signup';
 import DashboardAdmin from './pages/DashboardAdmin';
@@ -27,7 +19,6 @@ import AdminProfile from './pages/AdminProfile';
 import ResidentDashboard from './pages/ResidentDashboard';
 import ResidentActivity from './pages/ResidentActivity';
 import ResidentSubmission from './pages/ResidentSubmission';
->>>>>>> arnold2
 function App() {
   
   return (
@@ -37,8 +28,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-<<<<<<< HEAD
-=======
         <Route path="/admindashboard" element={<DashboardAdmin />} />
         <Route path="/" element={<DefaultPage />} /> 
         <Route path="/about" element={<AboutUs />} />
@@ -50,7 +39,6 @@ function App() {
         <Route path="/resident/dashboard" element={<ResidentDashboard />} />
         <Route path="/resident/activity" element={<ResidentActivity />} />
         <Route path="/resident/submissions" element={<ResidentSubmission />} />
->>>>>>> arnold2
       </Routes>
 
     </Router>
