@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import '../styles/LandingPage.css';
+=======
+import '../LandingPage.css';
+>>>>>>> arnold2
 
 export default function Services() {
   return (

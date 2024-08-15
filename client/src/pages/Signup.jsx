@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import '../styles/Signup.css';
+=======
+import '../Signup.css';
+>>>>>>> arnold2
 
 export default function Signup() {
   return (

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import '../styles/Settings.css';
 
@@ -87,3 +88,14 @@ const Settings = () => {
 };
 
 export default Settings;
+=======
+import React from 'react'
+
+function Settings() {
+  return (
+    <div></div>
+  )
+}
+
+export default Settings
+>>>>>>> arnold2

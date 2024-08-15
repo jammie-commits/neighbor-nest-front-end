@@ -4,7 +4,11 @@ import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 import '../styles/LandingPage.css';
+=======
+import '../LandingPage.css';
+>>>>>>> arnold2
 
 const HomePage = () => {
   return (
