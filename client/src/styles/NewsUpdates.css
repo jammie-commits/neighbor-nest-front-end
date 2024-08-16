@@ -1,0 +1,27 @@
+.news-updates {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-updates h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  .news-updates ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .news-updates li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .news-updates li:last-child {
+    border-bottom: none;
+  }
+  

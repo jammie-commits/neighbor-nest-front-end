@@ -1,0 +1,60 @@
+
+
+
+.about-hero {
+  text-align: center;
+  padding: 50px;
+  background-color: #34495e;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.about-content {
+  padding: 50px;
+}
+
+.about-section,
+.vision-section,
+.offer-section {
+  margin-bottom: 40px;
+}
+
+.about-section h2,
+.vision-section h2,
+.offer-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-section p,
+.vision-section p,
+.offer-section ul {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.offer-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.about-image {
+  width: 48%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

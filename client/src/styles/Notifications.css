@@ -1,0 +1,26 @@
+.notifications {
+    padding: 20px;
+  }
+  
+  .notifications-list {
+    margin-top: 20px;
+  }
+  
+  .notification {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .dismiss-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
