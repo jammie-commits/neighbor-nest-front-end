@@ -6,7 +6,8 @@
       "description": "Join us for a barbeque at the rooftop from 10pm on 12/07/25.",
       "date": "2024-07-12T22:00:00Z",
       "location": "Rooftop",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "8e88"
     },
     {
       "event_id": 2,
@@ -14,7 +15,8 @@
       "description": "Help us clean up the neighborhood on 12/08/25.",
       "date": "2024-08-12T08:00:00Z",
       "location": "Main Street",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "f2cd"
     },
     {
       "event_id": 3,
@@ -22,7 +24,8 @@
       "description": "Monthly meeting to discuss neighborhood safety and security.",
       "date": "2024-09-01T18:00:00Z",
       "location": "Community Center",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "4fdb"
     },
     {
       "event_id": 4,
@@ -30,7 +33,8 @@
       "description": "Annual block party with food, games, and live music.",
       "date": "2024-07-25T15:00:00Z",
       "location": "Maple Street",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "bcd3"
     },
     {
       "event_id": 5,
@@ -38,7 +42,8 @@
       "description": "Decorate your house for the holidays and enter to win a prize!",
       "date": "2024-12-15T17:00:00Z",
       "location": "Neighborhood",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "60d1"
     },
     {
       "event_id": 6,
@@ -46,7 +51,8 @@
       "description": "Learn tips and tricks for spring gardening at our workshop.",
       "date": "2024-04-10T10:00:00Z",
       "location": "Community Garden",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "a634"
     },
     {
       "event_id": 7,
@@ -54,7 +60,8 @@
       "description": "Celebrate the fall season with games, food, and music.",
       "date": "2024-10-20T13:00:00Z",
       "location": "Central Park",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "d98c"
     },
     {
       "event_id": 8,
@@ -62,7 +69,8 @@
       "description": "Bring your furry friends for a fun dog parade in the park.",
       "date": "2024-06-15T09:00:00Z",
       "location": "Dog Park",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "54c9"
     },
     {
       "event_id": 9,
@@ -70,7 +78,8 @@
       "description": "Discuss the latest book selection with fellow readers.",
       "date": "2024-05-05T19:00:00Z",
       "location": "Library",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "02ac"
     },
     {
       "event_id": 10,
@@ -78,9 +87,22 @@
       "description": "Explore the latest artworks by local artists.",
       "date": "2024-11-11T16:00:00Z",
       "location": "Art Gallery",
+      "status": "Pending",
+      "id": "d278"
+    },
+    {
+      "id": "6e5d",
+      "title": "Presidential visit",
+      "description": "The president will make an appearance to launch the orphanage",
+      "status": "pending"
+    },
+    {
+      "id": "c8be",
+      "title": "Car race",
+      "description": "Safari rally this coming weekend",
+      "residentId": "currentResidentId",
       "status": "Pending"
     }
-   
   ],
   "news": [
     {
@@ -93,7 +115,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-07-20 10:00:00",
-      "updated_at": "2024-07-20 10:00:00"
+      "updated_at": "2024-07-20 10:00:00",
+      "id": "ba6d"
     },
     {
       "news_id": 2,
@@ -105,7 +128,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-08-01 15:30:00",
-      "updated_at": "2024-08-01 15:30:00"
+      "updated_at": "2024-08-01 15:30:00",
+      "id": "1629"
     },
     {
       "news_id": 3,
@@ -117,7 +141,8 @@
       "neighborhood_id": 2,
       "admin_approved": true,
       "created_at": "2024-07-25 15:00:00",
-      "updated_at": "2024-07-25 15:00:00"
+      "updated_at": "2024-07-25 15:00:00",
+      "id": "5fd5"
     },
     {
       "news_id": 4,
@@ -129,7 +154,8 @@
       "neighborhood_id": 2,
       "admin_approved": true,
       "created_at": "2024-09-15 08:00:00",
-      "updated_at": "2024-09-15 08:00:00"
+      "updated_at": "2024-09-15 08:00:00",
+      "id": "5a9f"
     },
     {
       "news_id": 5,
@@ -141,7 +167,8 @@
       "neighborhood_id": 3,
       "admin_approved": true,
       "created_at": "2024-12-20 18:00:00",
-      "updated_at": "2024-12-20 18:00:00"
+      "updated_at": "2024-12-20 18:00:00",
+      "id": "d4cf"
     },
     {
       "news_id": 6,
@@ -153,7 +180,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-07-10 12:00:00",
-      "updated_at": "2024-07-10 12:00:00"
+      "updated_at": "2024-07-10 12:00:00",
+      "id": "a3c3"
     },
     {
       "news_id": 7,
@@ -165,7 +193,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-11-05 09:00:00",
-      "updated_at": "2024-11-05 09:00:00"
+      "updated_at": "2024-11-05 09:00:00",
+      "id": "5f99"
     },
     {
       "news_id": 8,
@@ -177,7 +206,8 @@
       "neighborhood_id": 2,
       "admin_approved": true,
       "created_at": "2024-06-01 14:00:00",
-      "updated_at": "2024-06-01 14:00:00"
+      "updated_at": "2024-06-01 14:00:00",
+      "id": "e7e6"
     },
     {
       "news_id": 9,
@@ -189,7 +219,8 @@
       "neighborhood_id": 3,
       "admin_approved": true,
       "created_at": "2024-10-15 11:00:00",
-      "updated_at": "2024-10-15 11:00:00"
+      "updated_at": "2024-10-15 11:00:00",
+      "id": "4d69"
     },
     {
       "news_id": 10,
@@ -201,7 +232,8 @@
       "neighborhood_id": 3,
       "admin_approved": true,
       "created_at": "2024-03-01 17:00:00",
-      "updated_at": "2024-03-01 17:00:00"
+      "updated_at": "2024-03-01 17:00:00",
+      "id": "adb2"
     }
   ]
 }

@@ -1,0 +1,27 @@
+/* src/components/residents/ResidentDashboard.module.css */
+
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboardContent {
+    padding: 20px;
+  }
+  
+  .newsContainer, .eventsContainer {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .newsContainer {
+    border: 1px solid #ddd; /* Optional: adds a border around the news section */
+  }
+  
+  .eventsContainer {
+    border: 1px solid #ddd; /* Optional: adds a border around the events section */
+  }
+  
