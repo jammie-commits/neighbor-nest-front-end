@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './Logout.module.css'; // Import the CSS file
+import styles from './Logout.module.css';
 
 const Logout = () => {
   const [showDialog, setShowDialog] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Clear user session or perform logout logic here
-    navigate('/login'); // Redirect to login page
+   
+    localStorage.removeItem('authToken'); 
+    navigate('/login'); 
   };
 
   const handleCancel = () => {
-    setShowDialog(false); // Close the dialog without logging out
+    setShowDialog(false); 
   };
 
   return (

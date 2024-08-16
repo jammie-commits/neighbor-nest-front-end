@@ -4,25 +4,29 @@ import styles from './Neighborhood.module.css';
 const Neighborhood = () => {
     const [neighborhoods, setNeighborhoods] = useState([]);
     const [editingId, setEditingId] = useState(null);
-    const [editedNeighborhood, setEditedNeighborhood] = useState({ name: '', description: '' });
+    const [editedNeighborhood, setEditedNeighborhood] = useState({ name: '', description: '', image: '' });
     const [isAdding, setIsAdding] = useState(false);
     const [newNeighborhood, setNewNeighborhood] = useState({ name: '', image: '', description: '' });
-
+    const [isVisible, setIsVisible] = useState(true); // Visibility state
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/api/neighborhoods')
+        fetch('http://localhost:5000/neighborhoods')
             .then(response => response.json())
             .then(data => setNeighborhoods(data))
             .catch(error => console.error('Error fetching neighborhoods:', error));
     }, []);
 
+    const handleExit = () => {
+        setIsVisible(false); // Hide the component
+    };
+
     const handleEditClick = (neighborhood) => {
         setEditingId(neighborhood.id);
-        setEditedNeighborhood({ name: neighborhood.name, description: neighborhood.description });
+        setEditedNeighborhood({ name: neighborhood.name, description: neighborhood.description, image: neighborhood.image });
     };
 
     const handleDeleteClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/neighborhoods/${id}`, { method: 'DELETE' })
+        fetch(`http://localhost:5000/neighborhoods/${id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {
                     setNeighborhoods(neighborhoods.filter((neighborhood) => neighborhood.id !== id));
@@ -33,7 +37,7 @@ const Neighborhood = () => {
     };
 
     const handleSaveClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/neighborhoods/${id}`, {
+        fetch(`http://localhost:5000/neighborhoods/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,12 +58,23 @@ const Neighborhood = () => {
         setEditedNeighborhood({ ...editedNeighborhood, [e.target.name]: e.target.value });
     };
 
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setEditedNeighborhood({ ...editedNeighborhood, image: reader.result });
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     const handleNewNeighborhoodChange = (e) => {
         const { name, value } = e.target;
         setNewNeighborhood({ ...newNeighborhood, [name]: value });
     };
 
-    const handleFileChange = (e) => {
+    const handleNewFileChange = (e) => {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
@@ -71,7 +86,7 @@ const Neighborhood = () => {
     };
 
     const handleAddNewNeighborhood = () => {
-        fetch('http://127.0.0.1:5000/api/neighborhoods', {
+        fetch('http://localhost:5000/neighborhoods', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -87,8 +102,13 @@ const Neighborhood = () => {
             .catch(error => console.error('Error adding neighborhood:', error));
     };
 
+    if (!isVisible) {
+        return <div className={styles.blankSpace}></div>; // Return blank space if not visible
+    }
+
     return (
         <div className={styles.neighborhood}>
+            <button className={styles.exitButton} onClick={handleExit}>Exit</button>
             <button onClick={() => setIsAdding(!isAdding)}>
                 {isAdding ? 'Cancel' : 'Add Neighborhood'}
             </button>
@@ -121,7 +141,7 @@ const Neighborhood = () => {
                             <input
                                 type="file"
                                 accept="image/*"
-                                onChange={handleFileChange}
+                                onChange={handleNewFileChange}
                             />
                         </div>
                         <button type="submit">Save Neighborhood</button>
@@ -149,6 +169,14 @@ const Neighborhood = () => {
                                         name="description"
                                         value={editedNeighborhood.description}
                                         onChange={handleChange}
+                                    />
+                                </div>
+                                <div>
+                                    <label>Upload Image:</label>
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleFileChange}
                                     />
                                 </div>
                                 <button onClick={() => handleSaveClick(neighborhood.id)}>Save</button>

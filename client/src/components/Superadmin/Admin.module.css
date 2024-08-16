@@ -148,3 +148,16 @@
     background-color: #357ABD;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+.exitButton {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.blankSpace {
+    height: 100px; /* Adjust as needed */
+    background-color: #f0f0f0; /* Example background color */
+}

@@ -2,39 +2,41 @@ import React, { useState, useEffect } from 'react';
 import styles from './Admin.module.css';
 
 const Admin = () => {
-    const [users, setUsers] = useState([]);
+    const [admins, setAdmins] = useState([]);
     const [editingId, setEditingId] = useState(null);
-    const [editedAdmin, setEditedAdmin] = useState({ name: '', email: '', neighborhood: '', picture: '' });
+    const [editedAdmin, setEditedAdmin] = useState({ name: '', email: '', password: '', neighborhood: '', picture: '' });
     const [isAdding, setIsAdding] = useState(false);
-    const [newAdmin, setNewAdmin] = useState({ name: '', email: '', neighborhood: '', picture: '' });
-
-
+    const [newAdmin, setNewAdmin] = useState({ name: '', email: '', password: '', neighborhood: '', picture: '' });
+    const [isVisible, setIsVisible] = useState(true); 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/api/users')
+        fetch('http://localhost:5000/admins')
             .then(response => response.json())
-            .then(data => setUsers(data))
-            .catch(error => console.error('Error fetching users:', error));
+            .then(data => setAdmins(data))
+            .catch(error => console.error('Error fetching admins:', error));
     }, []);
 
-    const handleEditClick = (user) => {
-        setEditingId(user.id);
-        setEditedAdmin({ name: user.name, email: user.email, neighborhood: user.neighborhood, picture: user.picture });
+    const handleExit = () => {
+        setIsVisible(false);
+    };
+
+    const handleEditClick = (admin) => {
+        setEditingId(admin.id);
+        setEditedAdmin({ name: admin.name, email: admin.email, password: admin.password, neighborhood: admin.neighborhood, picture: admin.picture });
     };
 
     const handleDeleteClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/admins/${id}`, { method: 'DELETE' })
+        fetch(`http://localhost:5000/admins/${id}`, { method: 'DELETE' })
             .then(response => {
                 if (response.ok) {
-                    setUsers(users.filter((user) => user.id !== id));
+                    setAdmins(admins.filter((admin) => admin.id !== id));
                 } else {
                     console.error('Error deleting admin');
                 }
             });
     };
-    
 
     const handleSaveClick = (id) => {
-        fetch(`http://127.0.0.1:5000/api/admins/${id}`, {
+        fetch(`http://localhost:5000/admins/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +45,7 @@ const Admin = () => {
         })
             .then(response => response.json())
             .then(updatedAdmin => {
-                setUsers(users.map((user) => (user.id === id ? updatedAdmin : user)));
+                setAdmins(admins.map((admin) => (admin.id === id ? updatedAdmin : admin)));
                 setEditingId(null);
             })
             .catch(error => console.error('Error updating admin:', error));
@@ -53,12 +55,16 @@ const Admin = () => {
         setEditedAdmin({ ...editedAdmin, [e.target.name]: e.target.value });
     };
 
-    const handleFileChange = (e) => {
+    const handleFileChange = (e, isEdit = false) => {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setEditedAdmin({ ...editedAdmin, picture: reader.result });
+                if (isEdit) {
+                    setEditedAdmin({ ...editedAdmin, picture: reader.result });
+                } else {
+                    setNewAdmin({ ...newAdmin, picture: reader.result });
+                }
             };
             reader.readAsDataURL(file);
         }
@@ -70,7 +76,7 @@ const Admin = () => {
     };
 
     const handleAddNewAdmin = () => {
-        fetch('http://127.0.0.1:5000/api/admins', {
+        fetch('http://localhost:5000/admins', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -79,15 +85,20 @@ const Admin = () => {
         })
             .then(response => response.json())
             .then(addedAdmin => {
-                setUsers([...users, addedAdmin]);
-                setNewAdmin({ name: '', email: '', neighborhood: '', picture: '' });
+                setAdmins([...admins, addedAdmin]);
+                setNewAdmin({ name: '', email: '', password: '', neighborhood: '', picture: '' });
                 setIsAdding(false);
             })
             .catch(error => console.error('Error adding admin:', error));
     };
 
+    if (!isVisible) {
+        return <div className={styles.blankSpace}></div>; 
+    }
+
     return (
         <div className={styles.admin}>
+            <button className={styles.exitButton} onClick={handleExit}>Exit</button>
             <button onClick={() => setIsAdding(!isAdding)}>
                 {isAdding ? 'Cancel' : 'Add Admin'}
             </button>
@@ -117,6 +128,16 @@ const Admin = () => {
                             />
                         </div>
                         <div>
+                            <label>Password:</label>
+                            <input
+                                type="password"
+                                name="password"
+                                value={newAdmin.password}
+                                onChange={handleNewAdminChange}
+                                required
+                            />
+                        </div>
+                        <div>
                             <label>Neighborhood:</label>
                             <input
                                 type="text"
@@ -131,7 +152,8 @@ const Admin = () => {
                             <input
                                 type="file"
                                 accept="image/*"
-                                onChange={handleFileChange}
+                                onChange={(e) => handleFileChange(e, false)}
+                                required
                             />
                         </div>
                         <button type="submit">Save Admin</button>
@@ -140,9 +162,9 @@ const Admin = () => {
             )}
 
             <div className={styles['user-cards']}>
-                {users.map((user) => (
-                    <div key={user.id} className={styles['user-card']}>
-                        {editingId === user.id ? (
+                {admins.map((admin) => (
+                    <div key={admin.id} className={styles['user-card']}>
+                        {editingId === admin.id ? (
                             <>
                                 <div>
                                     <label>Name:</label>
@@ -163,6 +185,15 @@ const Admin = () => {
                                     />
                                 </div>
                                 <div>
+                                    <label>Password:</label>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        value={editedAdmin.password}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div>
                                     <label>Neighborhood:</label>
                                     <input
                                         type="text"
@@ -176,23 +207,23 @@ const Admin = () => {
                                     <input
                                         type="file"
                                         accept="image/*"
-                                        onChange={handleFileChange}
+                                        onChange={(e) => handleFileChange(e, true)}
                                     />
                                 </div>
-                                <button onClick={() => handleSaveClick(user.id)}>Save</button>
+                                <button onClick={() => handleSaveClick(admin.id)}>Save</button>
                             </>
                         ) : (
                             <>
-                                {user.picture ? (
-                                    <img src={user.picture} alt="User" />
+                                {admin.picture ? (
+                                    <img src={admin.picture} alt="Admin" />
                                 ) : (
                                     <div className={styles['blank-image']}></div>
                                 )}
-                                <h3>{user.name}</h3>
-                                <p>{user.email}</p>
-                                <p>{user.neighborhood}</p>
-                                <button onClick={() => handleEditClick(user)}>Edit</button>
-                                <button onClick={() => handleDeleteClick(user.id)}>Delete</button>
+                                <h3>{admin.name}</h3>
+                                <p>{admin.email}</p>
+                                <p>{admin.neighborhood}</p>
+                                <button onClick={() => handleEditClick(admin)}>Edit</button>
+                                <button onClick={() => handleDeleteClick(admin.id)}>Delete</button>
                             </>
                         )}
                     </div>

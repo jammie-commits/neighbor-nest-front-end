@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #d3e3f1; /* Background color for the entire page */
+  background-color: #d3e3f1; 
+  
 }
 
 .header {
@@ -12,8 +13,9 @@ body {
   align-items: center;
   padding: 10px;
   margin: 30px;;
-  background-color: #ffffff; /* Keep the header background color */
+  background-color: #ffffff;
 }
+
 
 .logo {
   height: 30px;
@@ -42,37 +44,32 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 40px 20px;
-  background-color: transparent; /* Remove the background color */
+  background-color: transparent; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   
 }
 
 .contact-info {
-  max-width: 35%; /* Maintain the reduced width */
-  color: #000000; /* Black text color for visibility */
-  background-color: whitesmoke; /* Ensure no white background */
+  max-width: 35%; 
+  color: #000000; 
+  background-color: whitesmoke; 
 
 }
 
 .contact-info h1 {
   font-size: 3em;
-  margin-bottom: 0px; /* Add space under the heading */
-  color: #333; /* Ensure text is visible against the background */
-  font-weight: bold; /* Make the heading bold */
-
+  margin-bottom: 0px; 
+  color: #333; 
+  font-weight: bold; 
 }
 
 .contact-info p, .contact-info h2 {
   margin: 20px 0;
-  color: black; /* Ensure text is visible against the background */
-  font-weight: normal; /* Ensure the text is normal */
+  color: black; 
+  font-weight: normal; 
   font-size: 1.2em;
-  line-height: 1.6; /* Keep the text on a single line */
-
-  
-
-
+  line-height: 1.6; 
 }
 
 .contact-form {
@@ -96,21 +93,21 @@ body {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f0f0f0; /* Light grey background for input fields */
-  color: #000; /* Black text color */
+  background-color: #f0f0f0; 
+  color:#000;
 }
 
 .contact-form button {
   padding: 10px 20px;
-  background-color: #000000; /* Black button */
-  color: #ffffff; /* White text */
+  background-color: #000000; 
+  color: #ffffff;
   border: none;
   cursor: pointer;
   border-radius: 4px;
 }
 
 footer {
-  background-color: transparent; /* Remove the white background */
+  background-color: transparent; 
   padding: 20px;
 }
 
@@ -138,6 +135,6 @@ footer {
 
 .socials a {
   text-decoration: none;
-  color: #000000; /* Black text for socials */
+  color: #000000; 
   font-weight: bold;
 }

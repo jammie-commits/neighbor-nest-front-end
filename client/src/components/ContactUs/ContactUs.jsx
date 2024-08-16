@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from '../Header'; 
+import Footer from '../Footer'; 
 import styles from './ContactUs.module.css';
 
 const Contacts = () => {
@@ -6,36 +8,19 @@ const Contacts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add the code to handle the form submission, like sending the data to a server
-
-    // Show the submission success notification
+  
     setSubmissionSuccess(true);
 
-    // Clear the form or keep the data based on your preference
     e.target.reset();
 
-    // Hide the notification after a few seconds (optional)
     setTimeout(() => {
       setSubmissionSuccess(false);
-    }, 3000); // Hides after 3 seconds
+    }, 3000); 
   };
 
   return (
     <div id="contact-us">
-      <header className={styles.header}>
-        <img 
-          src="/images/White_And_Black_Modern_Abstract_Beauty_Logo-removebg-preview 1 (1).png" 
-          alt="Logo" 
-          className={styles.logo} 
-        />
-        <nav className={styles.nav}>
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/features">Features</a>
-          <a href="/contact">Contact Us</a>
-        </nav>
-        <button className={styles['login-button']}>Login/Create Account</button>
-      </header>
+      <Header /> 
 
       <div className={styles['contact-container']}>
         <div className={styles['contact-info']}>
@@ -75,19 +60,7 @@ const Contacts = () => {
         </div>
       </div>
 
-      <footer>
-        <div className={styles.contacts}>
-          <h3>Contacts</h3>
-          <p>Phone: (334) 202-4792</p>
-          <p>Email: nadoaya@comcast.net</p>
-          <p>Address: 950 Devonshire Ave Camp Hill, PA 17011, Johannesburg, South Africa</p>
-          <div className={styles.socials}>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://facebook.com">Facebook</a>
-          </div>
-        </div>
-      </footer>
+      <Footer /> 
     </div>
   );
 };

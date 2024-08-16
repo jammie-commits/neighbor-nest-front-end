@@ -1,23 +1,12 @@
 import React from 'react';
+import Header from '../Header'; // Importing the Header component
+import Footer from '../Footer'; // Importing the Footer component
 import styles from './AboutUs.module.css';
 
 function AboutUs() {
   return (
     <div className={styles['about-us']}>
-      <header className={styles.header}>
-        <img 
-          src="/images/White_And_Black_Modern_Abstract_Beauty_Logo-removebg-preview 1 (1).png" 
-          alt="Neighbor Nest Logo" 
-          className={styles.logo} 
-        />
-        <nav className={styles.nav}>
-          <a href="/">Home</a>
-          <a href="/about" className={styles['active-link']}>About Us</a>
-          <a href="/features">Features</a>
-          <a href="/contact">Contact Us</a>
-        </nav>
-        <button className={styles['login-button']}>Login/Create Account</button>
-      </header>
+      <Header /> {/* Using the imported Header component */}
 
       <div className={styles['about-hero']}>
         <h1>Welcome to Neighbor Nest</h1>
@@ -57,17 +46,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <footer className={styles['contact-info']}>
-        <h3>Contacts</h3>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@example.net</p>
-        <p>Address: 900 Domenico Ave Cape City, NL 12317, Johannesburg, South Africa</p>
-        <div className={styles.socials}>
-          <a href="https://instagram.com">Instagram</a>
-          <a href="https://twitter.com">Twitter</a>
-          <a href="https://facebook.com">Facebook</a>
-        </div>
-      </footer>
+      <Footer /> {/* Using the imported Footer component */}
     </div>
   );
 }

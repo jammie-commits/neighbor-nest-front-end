@@ -6,7 +6,8 @@
       "description": "Join us for a barbeque at the rooftop from 10pm on 12/07/25.",
       "date": "2024-07-12T22:00:00Z",
       "location": "Rooftop",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "0e14"
     },
     {
       "event_id": 2,
@@ -14,7 +15,8 @@
       "description": "Help us clean up the neighborhood on 12/08/25.",
       "date": "2024-08-12T08:00:00Z",
       "location": "Main Street",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "165b"
     },
     {
       "event_id": 3,
@@ -22,7 +24,8 @@
       "description": "Monthly meeting to discuss neighborhood safety and security.",
       "date": "2024-09-01T18:00:00Z",
       "location": "Community Center",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "87ef"
     },
     {
       "event_id": 4,
@@ -30,7 +33,8 @@
       "description": "Annual block party with food, games, and live music.",
       "date": "2024-07-25T15:00:00Z",
       "location": "Maple Street",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "4f8d"
     },
     {
       "event_id": 5,
@@ -38,7 +42,8 @@
       "description": "Decorate your house for the holidays and enter to win a prize!",
       "date": "2024-12-15T17:00:00Z",
       "location": "Neighborhood",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "c36a"
     },
     {
       "event_id": 6,
@@ -46,7 +51,8 @@
       "description": "Learn tips and tricks for spring gardening at our workshop.",
       "date": "2024-04-10T10:00:00Z",
       "location": "Community Garden",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "d01a"
     },
     {
       "event_id": 7,
@@ -54,7 +60,8 @@
       "description": "Celebrate the fall season with games, food, and music.",
       "date": "2024-10-20T13:00:00Z",
       "location": "Central Park",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "b22c"
     },
     {
       "event_id": 8,
@@ -62,7 +69,8 @@
       "description": "Bring your furry friends for a fun dog parade in the park.",
       "date": "2024-06-15T09:00:00Z",
       "location": "Dog Park",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "0ab5"
     },
     {
       "event_id": 9,
@@ -70,7 +78,8 @@
       "description": "Discuss the latest book selection with fellow readers.",
       "date": "2024-05-05T19:00:00Z",
       "location": "Library",
-      "status": "Verified"
+      "status": "Verified",
+      "id": "2174"
     },
     {
       "event_id": 10,
@@ -78,9 +87,9 @@
       "description": "Explore the latest artworks by local artists.",
       "date": "2024-11-11T16:00:00Z",
       "location": "Art Gallery",
-      "status": "Pending"
+      "status": "Pending",
+      "id": "b17e"
     }
-   
   ],
   "news": [
     {
@@ -93,7 +102,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-07-20 10:00:00",
-      "updated_at": "2024-07-20 10:00:00"
+      "updated_at": "2024-07-20 10:00:00",
+      "id": "233e"
     },
     {
       "news_id": 2,
@@ -105,7 +115,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-08-01 15:30:00",
-      "updated_at": "2024-08-01 15:30:00"
+      "updated_at": "2024-08-01 15:30:00",
+      "id": "99c1"
     },
     {
       "news_id": 3,
@@ -117,7 +128,8 @@
       "neighborhood_id": 2,
       "admin_approved": true,
       "created_at": "2024-07-25 15:00:00",
-      "updated_at": "2024-07-25 15:00:00"
+      "updated_at": "2024-07-25 15:00:00",
+      "id": "7a7c"
     },
     {
       "news_id": 4,
@@ -129,7 +141,8 @@
       "neighborhood_id": 2,
       "admin_approved": true,
       "created_at": "2024-09-15 08:00:00",
-      "updated_at": "2024-09-15 08:00:00"
+      "updated_at": "2024-09-15 08:00:00",
+      "id": "ac0b"
     },
     {
       "news_id": 5,
@@ -141,7 +154,8 @@
       "neighborhood_id": 3,
       "admin_approved": true,
       "created_at": "2024-12-20 18:00:00",
-      "updated_at": "2024-12-20 18:00:00"
+      "updated_at": "2024-12-20 18:00:00",
+      "id": "4d90"
     },
     {
       "news_id": 6,
@@ -153,7 +167,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-07-10 12:00:00",
-      "updated_at": "2024-07-10 12:00:00"
+      "updated_at": "2024-07-10 12:00:00",
+      "id": "2d0e"
     },
     {
       "news_id": 7,
@@ -165,7 +180,8 @@
       "neighborhood_id": 1,
       "admin_approved": true,
       "created_at": "2024-11-05 09:00:00",
-      "updated_at": "2024-11-05 09:00:00"
+      "updated_at": "2024-11-05 09:00:00",
+      "id": "8244"
     },
     {
       "news_id": 8,
@@ -177,7 +193,8 @@
       "neighborhood_id": 2,
       "admin_approved": true,
       "created_at": "2024-06-01 14:00:00",
-      "updated_at": "2024-06-01 14:00:00"
+      "updated_at": "2024-06-01 14:00:00",
+      "id": "16af"
     },
     {
       "news_id": 9,
@@ -189,7 +206,8 @@
       "neighborhood_id": 3,
       "admin_approved": true,
       "created_at": "2024-10-15 11:00:00",
-      "updated_at": "2024-10-15 11:00:00"
+      "updated_at": "2024-10-15 11:00:00",
+      "id": "8fc2"
     },
     {
       "news_id": 10,
@@ -201,7 +219,17 @@
       "neighborhood_id": 3,
       "admin_approved": true,
       "created_at": "2024-03-01 17:00:00",
-      "updated_at": "2024-03-01 17:00:00"
+      "updated_at": "2024-03-01 17:00:00",
+      "id": "8084"
+    }
+  ],
+  "admins": [],
+  "neighborhoods": [
+    {
+      "name": "runda apartments",
+      "description": "Nairobi",
+      "image": "data:image/png;base64,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",
+      "id": "b2cb"
     }
   ]
 }
